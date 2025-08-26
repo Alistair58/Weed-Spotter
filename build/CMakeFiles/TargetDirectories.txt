@@ -1,0 +1,3 @@
+/home/alistair/Weed-Identifier/build/CMakeFiles/Weed-Identifier.dir
+/home/alistair/Weed-Identifier/build/CMakeFiles/edit_cache.dir
+/home/alistair/Weed-Identifier/build/CMakeFiles/rebuild_cache.dir
