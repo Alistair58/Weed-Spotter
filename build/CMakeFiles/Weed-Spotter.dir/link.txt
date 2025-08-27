@@ -1,0 +1,1 @@
+/usr/bin/c++ -g "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o" -o Weed-Spotter  -lcamera -lcamera-base -ljpeg 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alistair/Weed-Identifier
+CMAKE_SOURCE_DIR = /home/alistair/Weed-Spotter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alistair/Weed-Identifier/build
+CMAKE_BINARY_DIR = /home/alistair/Weed-Spotter/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alistair/Weed-Identifier/build/CMakeFiles /home/alistair/Weed-Identifier/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alistair/Weed-Spotter/build/CMakeFiles /home/alistair/Weed-Spotter/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alistair/Weed-Identifier/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alistair/Weed-Spotter/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Weed-Identifier
+# Target rules for targets named Weed-Spotter
 
 # Build rule for target.
-Weed-Identifier: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Weed-Identifier
-.PHONY : Weed-Identifier
+Weed-Spotter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Weed-Spotter
+.PHONY : Weed-Spotter
 
 # fast build rule for target.
-Weed-Identifier/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/build
-.PHONY : Weed-Identifier/fast
+Weed-Spotter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/build
+.PHONY : Weed-Spotter/fast
 
 src/cameraaccess.o: src/cameraaccess.cpp.o
 .PHONY : src/cameraaccess.o
 
 # target to build an object file
 src/cameraaccess.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/src/cameraaccess.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o
 .PHONY : src/cameraaccess.cpp.o
 
 src/cameraaccess.i: src/cameraaccess.cpp.i
@@ -142,7 +142,7 @@ src/cameraaccess.i: src/cameraaccess.cpp.i
 
 # target to preprocess a source file
 src/cameraaccess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/src/cameraaccess.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.i
 .PHONY : src/cameraaccess.cpp.i
 
 src/cameraaccess.s: src/cameraaccess.cpp.s
@@ -150,15 +150,39 @@ src/cameraaccess.s: src/cameraaccess.cpp.s
 
 # target to generate assembly for a file
 src/cameraaccess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/src/cameraaccess.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.s
 .PHONY : src/cameraaccess.cpp.s
+
+src/cameraimage.o: src/cameraimage.cpp.o
+.PHONY : src/cameraimage.o
+
+# target to build an object file
+src/cameraimage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o
+.PHONY : src/cameraimage.cpp.o
+
+src/cameraimage.i: src/cameraimage.cpp.i
+.PHONY : src/cameraimage.i
+
+# target to preprocess a source file
+src/cameraimage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.i
+.PHONY : src/cameraimage.cpp.i
+
+src/cameraimage.s: src/cameraimage.cpp.s
+.PHONY : src/cameraimage.s
+
+# target to generate assembly for a file
+src/cameraimage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s
+.PHONY : src/cameraimage.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +198,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Identifier.dir/build.make CMakeFiles/Weed-Identifier.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -185,10 +209,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Weed-Identifier"
+	@echo "... Weed-Spotter"
 	@echo "... src/cameraaccess.o"
 	@echo "... src/cameraaccess.i"
 	@echo "... src/cameraaccess.s"
+	@echo "... src/cameraimage.o"
+	@echo "... src/cameraimage.i"
+	@echo "... src/cameraimage.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

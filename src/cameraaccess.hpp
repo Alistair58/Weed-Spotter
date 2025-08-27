@@ -28,13 +28,16 @@ class CameraAccess{
 		CameraAccess();
 		~CameraAccess();
 		CameraImage takePhoto();
-		void photoRequestComplete();
+		void photoRequestComplete(Request *req);
 	private:
 		CameraManager cm;
 		std::shared_ptr<Camera> camera;
-		const std::vector<std::unique_ptr<FrameBuffer>>& buffers;
 		std::unique_ptr<FrameBufferAllocator> allocator;
 		std::promise<void> photoPromise;
+		Stream *stream;
+		ControlList controls;
+		int imageHeight = 480;
+		int imageWidth = 640;
 };
 
 #endif
