@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alistair/Weed-Spotter/src/cameraaccess.cpp" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/cameraimage.cpp" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/main.cpp" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d"
+  "/home/alistair/Weed-Spotter/src/streamer.cpp" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o.d"
   )
 
 # Targets to which this target links.

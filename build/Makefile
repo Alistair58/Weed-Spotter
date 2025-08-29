@@ -201,6 +201,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/streamer.o: src/streamer.cpp.o
+.PHONY : src/streamer.o
+
+# target to build an object file
+src/streamer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o
+.PHONY : src/streamer.cpp.o
+
+src/streamer.i: src/streamer.cpp.i
+.PHONY : src/streamer.i
+
+# target to preprocess a source file
+src/streamer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.i
+.PHONY : src/streamer.cpp.i
+
+src/streamer.s: src/streamer.cpp.s
+.PHONY : src/streamer.s
+
+# target to generate assembly for a file
+src/streamer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.s
+.PHONY : src/streamer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/streamer.o"
+	@echo "... src/streamer.i"
+	@echo "... src/streamer.s"
 .PHONY : help
 
 
