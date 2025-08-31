@@ -21,6 +21,7 @@ Streamer::Streamer(int *argcPtr,char ***argvPtr){
 			"rpicam-vid","rpicam-vid", 
 			"-t","0",
 			"--inline",
+			"--intra","30",
 			"--nopreview",
 			"--width","640",
 			"--height","480",
@@ -36,16 +37,19 @@ Streamer::Streamer(int *argcPtr,char ***argvPtr){
 
 	GstRTSPServer *server = gst_rtsp_server_new();
 	GstRTSPMountPoints *mounts = gst_rtsp_server_get_mount_points(server);
-
+	
+	const char *sprop_param_sets = "Z0LADdkBQfsBEAAAAwAQAAADAyDxgxqw,aM48gA=="; //For 640x480
 	std::string pipeline =
 				"( fdsrc fd="+std::to_string(pipefd[0])+" name=picamsrc "+
 				" ! queue "+
-				" ! h264parse "+
-				" ! video/x-h264,stream-format=byte-stream,alignment=au "+
-				" ! rtph264pay name=pay0 config-interval=1 pt=96 )";
+				" ! h264parse config-interval=-1 "+
+				" ! video/x-h264,stream-format=avc,alignment=au "+
+				" ! rtph264pay name=pay0 config-interval=1 pt=96 "+
+				" sprop-parameter-sets=\""+ sprop_param_sets +"\" )";
 	GstRTSPMediaFactory *factory = gst_rtsp_media_factory_new();
 	gst_rtsp_media_factory_set_launch(factory,pipeline.c_str());
 	gst_rtsp_media_factory_set_shared(factory,TRUE);
+	gst_rtsp_media_factory_set_latency(factory,0);
 	
 	g_signal_connect(factory, "media-configure", (GCallback) Streamer::onMediaConfigure,NULL);
 
@@ -65,7 +69,8 @@ void Streamer::onMediaConfigure(GstRTSPMediaFactory *factory,
 	if(!element) return;
 	GstElement *fd = gst_bin_get_by_name_recurse_up(GST_BIN(element),"picamsrc");
 	if(fd){
-		g_object_set(fd,"is-live",TRUE,"do-timestamp",TRUE,NULL);
+		//is-live doesn't exist in here apparently - you get a warning at runtime
+		g_object_set(fd,"do-timestamp",TRUE,NULL);
 		gst_object_unref(fd);
 	}
 	gst_object_unref(element);
