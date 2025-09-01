@@ -19,6 +19,12 @@ add_executable(Weed-Spotter
 	src/httpsserver.cpp
 )
 
+target_precompile_headers(Weed-Spotter PRIVATE
+	lib/httplib.h
+	<openssl/ssl.h>
+	<openssl/err.h>
+)
+
 target_include_directories(Weed-Spotter  PRIVATE
 	${CMAKE_CURRENT_LIST_DIR}/src
 	${CMAKE_CURRENT_LIST_DIR}/lib

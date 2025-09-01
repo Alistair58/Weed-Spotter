@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch"
+  "CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch.d"
   "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o"
   "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d"
   "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o"

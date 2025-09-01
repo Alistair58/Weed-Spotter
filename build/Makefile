@@ -129,6 +129,21 @@ Weed-Spotter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/build
 .PHONY : Weed-Spotter/fast
 
+# target to build an object file
+cmake_pch.hxx.gch:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
+
+# target to preprocess a source file
+cmake_pch.hxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.i
+.PHONY : cmake_pch.hxx.i
+
+# target to generate assembly for a file
+cmake_pch.hxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.s
+.PHONY : cmake_pch.hxx.s
+
 src/cameraaccess.o: src/cameraaccess.cpp.o
 .PHONY : src/cameraaccess.o
 
@@ -258,6 +273,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Weed-Spotter"
+	@echo "... cmake_pch.hxx.gch"
+	@echo "... cmake_pch.hxx.i"
+	@echo "... cmake_pch.hxx.s"
 	@echo "... src/cameraaccess.o"
 	@echo "... src/cameraaccess.i"
 	@echo "... src/cameraaccess.s"

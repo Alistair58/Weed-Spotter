@@ -8,3 +8,15 @@ CXX_INCLUDES = -I/home/alistair/Weed-Spotter/src -I/home/alistair/Weed-Spotter/l
 
 CXX_FLAGS = -std=gnu++20
 
+# PCH options: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch_OPTIONS = -Winvalid-pch;-x;c++-header;-include;/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/Weed-Spotter.dir/src/main.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
+
+# PCH options: CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o_OPTIONS = -Winvalid-pch;-include;/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
+

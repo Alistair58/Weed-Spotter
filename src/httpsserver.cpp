@@ -1,3 +1,5 @@
+#define CPPHTTPLIB_OPENSSL_SUPPORT
+#include "httplib.h"
 #include "httpsserver.hpp"
 
 
