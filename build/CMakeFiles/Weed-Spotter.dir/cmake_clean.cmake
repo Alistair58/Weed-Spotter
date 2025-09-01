@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d"
   "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o"
   "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d"
+  "CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o"
+  "CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o.d"
   "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o"
   "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d"
   "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o"

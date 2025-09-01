@@ -10,7 +10,7 @@
 
 class Streamer{
 	public:
-		Streamer(int *argcPtr,char ***argvPtr);
+		Streamer(int *argcPtr,char ***argvPtr,int parentPipefd[2]);
 		static void onMediaConfigure(   GstRTSPMediaFactory *factory,
 						GstRTSPMedia *media,
 						gpointer user_data);

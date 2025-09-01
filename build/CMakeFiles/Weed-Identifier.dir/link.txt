@@ -1,1 +1,0 @@
-/usr/bin/c++ "CMakeFiles/Weed-Identifier.dir/src/main.cpp.o" "CMakeFiles/Weed-Identifier.dir/src/cameraaccess.cpp.o" -o Weed-Identifier  -lcamera -lcamera-base 

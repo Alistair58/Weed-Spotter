@@ -1,22 +1,23 @@
 #include "streamer.hpp"
 
 
-Streamer::Streamer(int *argcPtr,char ***argvPtr){
+Streamer::Streamer(int *argcPtr,char ***argvPtr,int parentPipefd[2]){
+	close(parentPipefd[0]);
 	gst_init(argcPtr,argvPtr);
-	//Set up the pipe
-	int pipefd[2];
-	if(pipe(pipefd) == -1){
+	//Set up the streaming pipe
+	int streamPipefd[2];
+	if(pipe(streamPipefd) == -1){
 		throw std::runtime_error("Could not pipe");
 	}
 	pid_t pid = fork();
 	if(pid == 0){
 		//rpicam-vid writes to the pipe
 		//close read end
-		close(pipefd[0]);
+		close(streamPipefd[0]);
 		//Set the output to stdout where gstreamer will read it from
-		dup2(pipefd[1],STDOUT_FILENO);
+		dup2(streamPipefd[1],STDOUT_FILENO);
 		//We don't need it anymore as we've set it to stdout
-		close(pipefd[1]);
+		close(streamPipefd[1]);
 		execlp(
 			"rpicam-vid","rpicam-vid", 
 			"-t","0",
@@ -28,19 +29,25 @@ Streamer::Streamer(int *argcPtr,char ***argvPtr){
 			"--framerate","30",
 			"--codec","h264",
 			"-o","-", //Output to stdout
+			"--signal", //Listen to signals e.g. take photo signal
+			"-o", "/pictures/photo_%d.jpg",
 			(char *)NULL
 		);
 		throw std::runtime_error("execlp failed");
 	}
+	//Give the child PID to our parent (the grandparent)
+	write(parentPipefd[1],&pid,,sizeof(pid_t));
+	close(parentPipefd[1]);
+
 	//We don't write anything
-	close(pipefd[1]);
+	close(streamPipefd[1]);
 
 	GstRTSPServer *server = gst_rtsp_server_new();
 	GstRTSPMountPoints *mounts = gst_rtsp_server_get_mount_points(server);
 	
 	const char *sprop_param_sets = "Z0LADdkBQfsBEAAAAwAQAAADAyDxgxqw,aM48gA=="; //For 640x480
 	std::string pipeline =
-				"( fdsrc fd="+std::to_string(pipefd[0])+" name=picamsrc "+
+				"( fdsrc fd="+std::to_string(streamPipefd[0])+" name=picamsrc "+
 				" ! queue "+
 				" ! h264parse config-interval=-1 "+
 				" ! video/x-h264,stream-format=avc,alignment=au "+

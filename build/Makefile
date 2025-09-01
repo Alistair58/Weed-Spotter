@@ -177,6 +177,30 @@ src/cameraimage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s
 .PHONY : src/cameraimage.cpp.s
 
+src/httpsserver.o: src/httpsserver.cpp.o
+.PHONY : src/httpsserver.o
+
+# target to build an object file
+src/httpsserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o
+.PHONY : src/httpsserver.cpp.o
+
+src/httpsserver.i: src/httpsserver.cpp.i
+.PHONY : src/httpsserver.i
+
+# target to preprocess a source file
+src/httpsserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.i
+.PHONY : src/httpsserver.cpp.i
+
+src/httpsserver.s: src/httpsserver.cpp.s
+.PHONY : src/httpsserver.s
+
+# target to generate assembly for a file
+src/httpsserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.s
+.PHONY : src/httpsserver.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... src/cameraimage.o"
 	@echo "... src/cameraimage.i"
 	@echo "... src/cameraimage.s"
+	@echo "... src/httpsserver.o"
+	@echo "... src/httpsserver.i"
+	@echo "... src/httpsserver.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
