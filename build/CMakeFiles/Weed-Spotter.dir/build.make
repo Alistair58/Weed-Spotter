@@ -69,100 +69,75 @@ include CMakeFiles/Weed-Spotter.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Weed-Spotter.dir/flags.make
 
-CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch: CMakeFiles/Weed-Spotter.dir/flags.make
-CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.cxx
-CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
-CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -MD -MT CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch -MF CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch.d -o CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch -c /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.cxx
-
-CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -E /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.cxx > CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.i
-
-CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -x c++-header -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -S /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.cxx -o CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.s
-
 CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: CMakeFiles/Weed-Spotter.dir/flags.make
 CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main.cpp
-CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
-CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
 CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -MD -MT CMakeFiles/Weed-Spotter.dir/src/main.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/main.cpp.o -c /home/alistair/Weed-Spotter/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Weed-Spotter.dir/src/main.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/main.cpp.o -c /home/alistair/Weed-Spotter/src/main.cpp
 
 CMakeFiles/Weed-Spotter.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -E /home/alistair/Weed-Spotter/src/main.cpp > CMakeFiles/Weed-Spotter.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alistair/Weed-Spotter/src/main.cpp > CMakeFiles/Weed-Spotter.dir/src/main.cpp.i
 
 CMakeFiles/Weed-Spotter.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -S /home/alistair/Weed-Spotter/src/main.cpp -o CMakeFiles/Weed-Spotter.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alistair/Weed-Spotter/src/main.cpp -o CMakeFiles/Weed-Spotter.dir/src/main.cpp.s
 
 CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: CMakeFiles/Weed-Spotter.dir/flags.make
 CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: /home/alistair/Weed-Spotter/src/cameraaccess.cpp
-CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
-CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
 CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -MD -MT CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o -c /home/alistair/Weed-Spotter/src/cameraaccess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o -c /home/alistair/Weed-Spotter/src/cameraaccess.cpp
 
 CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -E /home/alistair/Weed-Spotter/src/cameraaccess.cpp > CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alistair/Weed-Spotter/src/cameraaccess.cpp > CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.i
 
 CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -S /home/alistair/Weed-Spotter/src/cameraaccess.cpp -o CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alistair/Weed-Spotter/src/cameraaccess.cpp -o CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.s
 
 CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: CMakeFiles/Weed-Spotter.dir/flags.make
 CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: /home/alistair/Weed-Spotter/src/cameraimage.cpp
-CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
-CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
 CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -MD -MT CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o -c /home/alistair/Weed-Spotter/src/cameraimage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o -c /home/alistair/Weed-Spotter/src/cameraimage.cpp
 
 CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -E /home/alistair/Weed-Spotter/src/cameraimage.cpp > CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alistair/Weed-Spotter/src/cameraimage.cpp > CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.i
 
 CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -S /home/alistair/Weed-Spotter/src/cameraimage.cpp -o CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alistair/Weed-Spotter/src/cameraimage.cpp -o CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s
 
 CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: CMakeFiles/Weed-Spotter.dir/flags.make
 CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/streamer.cpp
-CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
-CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
 CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -MD -MT CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o -c /home/alistair/Weed-Spotter/src/streamer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o -c /home/alistair/Weed-Spotter/src/streamer.cpp
 
 CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -E /home/alistair/Weed-Spotter/src/streamer.cpp > CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alistair/Weed-Spotter/src/streamer.cpp > CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.i
 
 CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -S /home/alistair/Weed-Spotter/src/streamer.cpp -o CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alistair/Weed-Spotter/src/streamer.cpp -o CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.s
 
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o: CMakeFiles/Weed-Spotter.dir/flags.make
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o: /home/alistair/Weed-Spotter/src/httpsserver.cpp
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -MD -MT CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o -c /home/alistair/Weed-Spotter/src/httpsserver.cpp
+CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: CMakeFiles/Weed-Spotter.dir/flags.make
+CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/src/httpserver.cpp
+CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: CMakeFiles/Weed-Spotter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o -MF CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o.d -o CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o -c /home/alistair/Weed-Spotter/src/httpserver.cpp
 
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -E /home/alistair/Weed-Spotter/src/httpsserver.cpp > CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.i
+CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alistair/Weed-Spotter/src/httpserver.cpp > CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.i
 
-CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Winvalid-pch -include /home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx -S /home/alistair/Weed-Spotter/src/httpsserver.cpp -o CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.s
+CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alistair/Weed-Spotter/src/httpserver.cpp -o CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.s
 
 # Object files for target Weed-Spotter
 Weed__Spotter_OBJECTS = \
@@ -170,20 +145,21 @@ Weed__Spotter_OBJECTS = \
 "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o" \
 "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o" \
 "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o" \
-"CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o"
+"CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o"
 
 # External object files for target Weed-Spotter
 Weed__Spotter_EXTERNAL_OBJECTS =
 
-Weed-Spotter: CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
 Weed-Spotter: CMakeFiles/Weed-Spotter.dir/src/main.cpp.o
 Weed-Spotter: CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o
 Weed-Spotter: CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o
 Weed-Spotter: CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o
-Weed-Spotter: CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o
+Weed-Spotter: CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o
 Weed-Spotter: CMakeFiles/Weed-Spotter.dir/build.make
+Weed-Spotter: /usr/lib/aarch64-linux-gnu/libcivetweb-cpp.so.1.15.0
+Weed-Spotter: /usr/lib/aarch64-linux-gnu/libcivetweb.so.1.15.0
 Weed-Spotter: CMakeFiles/Weed-Spotter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Weed-Spotter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alistair/Weed-Spotter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Weed-Spotter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Weed-Spotter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

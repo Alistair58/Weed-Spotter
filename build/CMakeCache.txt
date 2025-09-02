@@ -186,6 +186,18 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path to a file.
+LIBDL_INCLUDE_DIRS:PATH=/usr/include
+
+//Path to a library.
+LIBDL_LIBRARIES:FILEPATH=/usr/lib/aarch64-linux-gnu/libdl.a
+
+//Path to a file.
+LIBRT_INCLUDE_DIRS:PATH=/usr/include
+
+//Path to a library.
+LIBRT_LIBRARIES:FILEPATH=/usr/lib/aarch64-linux-gnu/librt.a
+
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
 
@@ -200,6 +212,9 @@ Weed-Spotter_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Weed-Spotter_SOURCE_DIR:STATIC=/home/alistair/Weed-Spotter
+
+//The directory containing a CMake configuration file for civetweb.
+civetweb_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/civetweb
 
 //Path to a library.
 pkgcfg_lib_GSTREAMER_RTSP_glib-2.0:FILEPATH=/usr/lib/aarch64-linux-gnu/libglib-2.0.so
@@ -304,6 +319,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/alistair/Weed-Spotter
@@ -369,8 +386,14 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding LibDl
+FIND_PACKAGE_MESSAGE_DETAILS_LibDl:INTERNAL=[/usr/lib/aarch64-linux-gnu/libdl.a][/usr/include][v()]
+//Details about finding LibRt
+FIND_PACKAGE_MESSAGE_DETAILS_LibRt:INTERNAL=[/usr/lib/aarch64-linux-gnu/librt.a][/usr/include][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GSTREAMER_CFLAGS:INTERNAL=-I/usr/include/gstreamer-1.0;-I/usr/include/glib-2.0;-I/usr/lib/aarch64-linux-gnu/glib-2.0/include;-pthread;-I/usr/include/aarch64-linux-gnu
 GSTREAMER_CFLAGS_I:INTERNAL=
 GSTREAMER_CFLAGS_OTHER:INTERNAL=-pthread
@@ -511,6 +534,14 @@ LIBCAMERA_libcamera_INCLUDEDIR:INTERNAL=
 LIBCAMERA_libcamera_LIBDIR:INTERNAL=
 LIBCAMERA_libcamera_PREFIX:INTERNAL=
 LIBCAMERA_libcamera_VERSION:INTERNAL=
+//ADVANCED property for variable: LIBDL_INCLUDE_DIRS
+LIBDL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBDL_LIBRARIES
+LIBDL_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBRT_INCLUDE_DIRS
+LIBRT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBRT_LIBRARIES
+LIBRT_LIBRARIES-ADVANCED:INTERNAL=1
 OPENSSL_CFLAGS:INTERNAL=
 OPENSSL_CFLAGS_I:INTERNAL=
 OPENSSL_CFLAGS_OTHER:INTERNAL=

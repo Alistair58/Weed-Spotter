@@ -8,18 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.cxx" "CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch.d"
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx" "CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch" "gcc" "CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch.d"
   "/home/alistair/Weed-Spotter/src/cameraaccess.cpp" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d"
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/cameraimage.cpp" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d"
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d"
-  "/home/alistair/Weed-Spotter/src/httpsserver.cpp" "CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o.d"
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx" "CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o.d"
+  "/home/alistair/Weed-Spotter/src/httpserver.cpp" "CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/main.cpp" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d"
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/streamer.cpp" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o.d"
-  "/home/alistair/Weed-Spotter/build/CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o.d"
   )
 
 # Targets to which this target links.

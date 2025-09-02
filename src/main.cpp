@@ -1,7 +1,7 @@
 #include "cameraimage.hpp"
 #include "cameraaccess.hpp"
 #include "streamer.hpp"
-#include "httpsserver.hpp"
+#include "httpserver.hpp"
 #include "sys/types.h"
 #include <unistd.h>
 
@@ -14,6 +14,6 @@ int main(int argc,char **argv){
 	if(pid==0){ //child
 		Streamer streamer(&argc,&argv,pipefd);
 	}
-	startHttpsServer(pipefd);
+	startHttpServer(pipefd);
 	return 0;
 }

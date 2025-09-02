@@ -29,14 +29,12 @@ Streamer::Streamer(int *argcPtr,char ***argvPtr,int parentPipefd[2]){
 			"--framerate","30",
 			"--codec","h264",
 			"-o","-", //Output to stdout
-			"--signal", //Listen to signals e.g. take photo signal
-			"-o", "/pictures/photo_%d.jpg",
 			(char *)NULL
 		);
 		throw std::runtime_error("execlp failed");
 	}
 	//Give the child PID to our parent (the grandparent)
-	write(parentPipefd[1],&pid,,sizeof(pid_t));
+	write(parentPipefd[1],&pid,sizeof(pid_t));
 	close(parentPipefd[1]);
 
 	//We don't write anything

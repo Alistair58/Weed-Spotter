@@ -220,3 +220,38 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/alistair/Weed-Spotter/build/CMakeFiles/CMakeScratch/TryCompile-TMN7k1
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ec100/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ec100.dir/build.make CMakeFiles/cmTC_ec100.dir/build
+gmake[1]: Entering directory '/home/alistair/Weed-Spotter/build/CMakeFiles/CMakeScratch/TryCompile-TMN7k1'
+Building CXX object CMakeFiles/cmTC_ec100.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_ec100.dir/src.cxx.o -c /home/alistair/Weed-Spotter/build/CMakeFiles/CMakeScratch/TryCompile-TMN7k1/src.cxx
+Linking CXX executable cmTC_ec100
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec100.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ec100.dir/src.cxx.o -o cmTC_ec100 
+gmake[1]: Leaving directory '/home/alistair/Weed-Spotter/build/CMakeFiles/CMakeScratch/TryCompile-TMN7k1'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+

@@ -129,21 +129,6 @@ Weed-Spotter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/build
 .PHONY : Weed-Spotter/fast
 
-# target to build an object file
-cmake_pch.hxx.gch:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.gch
-.PHONY : cmake_pch.hxx.gch
-
-# target to preprocess a source file
-cmake_pch.hxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.i
-.PHONY : cmake_pch.hxx.i
-
-# target to generate assembly for a file
-cmake_pch.hxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/cmake_pch.hxx.s
-.PHONY : cmake_pch.hxx.s
-
 src/cameraaccess.o: src/cameraaccess.cpp.o
 .PHONY : src/cameraaccess.o
 
@@ -192,29 +177,29 @@ src/cameraimage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s
 .PHONY : src/cameraimage.cpp.s
 
-src/httpsserver.o: src/httpsserver.cpp.o
-.PHONY : src/httpsserver.o
+src/httpserver.o: src/httpserver.cpp.o
+.PHONY : src/httpserver.o
 
 # target to build an object file
-src/httpsserver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o
-.PHONY : src/httpsserver.cpp.o
+src/httpserver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o
+.PHONY : src/httpserver.cpp.o
 
-src/httpsserver.i: src/httpsserver.cpp.i
-.PHONY : src/httpsserver.i
+src/httpserver.i: src/httpserver.cpp.i
+.PHONY : src/httpserver.i
 
 # target to preprocess a source file
-src/httpsserver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.i
-.PHONY : src/httpsserver.cpp.i
+src/httpserver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.i
+.PHONY : src/httpserver.cpp.i
 
-src/httpsserver.s: src/httpsserver.cpp.s
-.PHONY : src/httpsserver.s
+src/httpserver.s: src/httpserver.cpp.s
+.PHONY : src/httpserver.s
 
 # target to generate assembly for a file
-src/httpsserver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.s
-.PHONY : src/httpsserver.cpp.s
+src/httpserver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.s
+.PHONY : src/httpserver.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -273,18 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Weed-Spotter"
-	@echo "... cmake_pch.hxx.gch"
-	@echo "... cmake_pch.hxx.i"
-	@echo "... cmake_pch.hxx.s"
 	@echo "... src/cameraaccess.o"
 	@echo "... src/cameraaccess.i"
 	@echo "... src/cameraaccess.s"
 	@echo "... src/cameraimage.o"
 	@echo "... src/cameraimage.i"
 	@echo "... src/cameraimage.s"
-	@echo "... src/httpsserver.o"
-	@echo "... src/httpsserver.i"
-	@echo "... src/httpsserver.s"
+	@echo "... src/httpserver.o"
+	@echo "... src/httpserver.i"
+	@echo "... src/httpserver.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
