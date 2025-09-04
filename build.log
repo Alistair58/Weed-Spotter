@@ -1,8 +1,0 @@
-[ 16%] Building CXX object CMakeFiles/Weed-Spotter.dir/src/main.cpp.o
-[ 33%] Building CXX object CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o
-[ 50%] Building CXX object CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o
-[ 66%] Building CXX object CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o
-[ 83%] Building CXX object CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o
-make[2]: *** [CMakeFiles/Weed-Spotter.dir/build.make:132: CMakeFiles/Weed-Spotter.dir/src/httpsserver.cpp.o] Terminated
-make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/Weed-Spotter.dir/all] Terminated
-make: *** [Makefile:91: all] Terminated

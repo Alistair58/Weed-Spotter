@@ -225,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/picoi2c.o: src/picoi2c.cpp.o
+.PHONY : src/picoi2c.o
+
+# target to build an object file
+src/picoi2c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.o
+.PHONY : src/picoi2c.cpp.o
+
+src/picoi2c.i: src/picoi2c.cpp.i
+.PHONY : src/picoi2c.i
+
+# target to preprocess a source file
+src/picoi2c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.i
+.PHONY : src/picoi2c.cpp.i
+
+src/picoi2c.s: src/picoi2c.cpp.s
+.PHONY : src/picoi2c.s
+
+# target to generate assembly for a file
+src/picoi2c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.s
+.PHONY : src/picoi2c.cpp.s
+
 src/streamer.o: src/streamer.cpp.o
 .PHONY : src/streamer.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/picoi2c.o"
+	@echo "... src/picoi2c.i"
+	@echo "... src/picoi2c.s"
 	@echo "... src/streamer.o"
 	@echo "... src/streamer.i"
 	@echo "... src/streamer.s"

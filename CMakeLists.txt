@@ -17,6 +17,7 @@ add_executable(Weed-Spotter
 	src/cameraimage.cpp
 	src/streamer.cpp
 	src/httpserver.cpp
+	src/picoi2c.cpp
 )
 
 
