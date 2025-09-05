@@ -7,7 +7,8 @@
 #include <cstring>
 
 //Names match the code on the Pico
-#define ZERO_I2C_ADDR 0xA0
+//7 bit address
+#define ZERO_I2C_ADDR 0x2A
 #define ZERO_CHECK_BYTE 0xA6
 
 typedef enum ZERO_CMDS{

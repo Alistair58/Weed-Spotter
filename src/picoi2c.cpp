@@ -12,7 +12,7 @@ void picoI2cListenBlocking(void){
 	//bit 9 -> enable receive
 	//bits [16:22] -> address
 	memset(&xfer,0,sizeof(bsc_xfer_t));
-	xfer.control = (ZERO_I2C_ADDR<<16) & 0x305;
+	xfer.control = (ZERO_I2C_ADDR<<16) | 0x305;
 
 	if(bscXfer(&xfer) < 0){
 		gpioTerminate();
@@ -30,15 +30,18 @@ void picoI2cListenBlocking(void){
 		//We got something
 		if(status >= 0 && xfer.rxCnt > 0){
 			std::cout << "Received "<< xfer.rxCnt << " bytes on I2C" << std::endl;
-			if(xfer.rxCnt!=2) continue;
-			if(xfer.rxBuf[0] == ZERO_CHECK_BYTE && xfer.rxBuf[1] == POWEROFF){
-				std::cout << "Powering off" << std::endl;
-				//Stop I2C
-				xfer.control = 0;
-				bscXfer(&xfer);
-				gpioTerminate();
-				execl("poweroff","poweroff");
-				std::cerr << "Could not power off" << std::endl;
+			if(xfer.rxCnt<2) continue;
+			for(int i=0;i<(xfer.rxCnt-1);i++){
+				printf("\nrxBuf[i]: %x rxBuf[i+1]: %x",xfer.rxBuf[i],xfer.rxBuf[i+1]);
+				if(xfer.rxBuf[i] == ZERO_CHECK_BYTE && xfer.rxBuf[i+1] == POWEROFF){
+					std::cout << "Powering off" << std::endl;
+					//Stop I2C
+					xfer.control = 0;
+					bscXfer(&xfer);
+					gpioTerminate();
+					system("poweroff");
+					std::cerr << "Could not power off" << std::endl;
+				}
 			}
 		}
 		usleep(polling_period_micro);
