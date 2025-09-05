@@ -28,6 +28,7 @@ target_include_directories(Weed-Spotter  PRIVATE
 	${LIBCAMERA_INCLUDE_DIRS}
 	${GSTREAMER_INCLUDE_DIRS}
 	${GSTREAMER_RTSP_INCLUDE_DIRS}
+	/usr/include
 )
 
 target_link_libraries(Weed-Spotter  PRIVATE
@@ -35,9 +36,12 @@ target_link_libraries(Weed-Spotter  PRIVATE
 	${JPEG_LIBRARIES}
 	${GSTREAMER_LIBRARIES}
 	${GSTREAMER_RTSP_LIBRARIES}
+	${PIGPIO_LIBRARIES}
 	civetweb::civetweb-cpp
+	pigpio
 )
 
 target_compile_options(Weed-Spotter PRIVATE
 	${LIBCAMERA_CFLAGS_OTHER}
+	${PIGPIO_CFLAGS_OTHER}
 )

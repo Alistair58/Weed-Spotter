@@ -4,6 +4,7 @@
 #include <iostream>
 #include <pigpio.h>
 #include <unistd.h>
+#include <cstring>
 
 //Names match the code on the Pico
 #define ZERO_I2C_ADDR 0xA0
