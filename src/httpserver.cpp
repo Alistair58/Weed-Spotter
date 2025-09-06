@@ -75,7 +75,8 @@ void startHttpServer(int pipefd[2]){
 int findHighestPhotoId(void){
 	const std::string folderPath = "/home/alistair/pictures";
 	std::regex photoFnamePattern(R"(photo_(\d+)\.jpg)");
-	int maxIndex = INT_MIN;
+	//If we don't find any photos return -1 which will give the first photo as "photo_0.jpg"
+	int maxIndex = -1;
 	for(const auto& entry: std::filesystem::directory_iterator(folderPath)){
 		if(entry.is_regular_file()){
 			std::string fname = entry.path().filename().string();
