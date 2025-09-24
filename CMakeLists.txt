@@ -18,12 +18,17 @@ add_executable(Weed-Spotter
 	src/streamer.cpp
 	src/httpserver.cpp
 	src/picoi2c.cpp
+	src/cnn/cnn.cpp
+	src/cnn/cnnutils.cpp
+	src/cnn/tensor.cpp
 )
 
 
 target_include_directories(Weed-Spotter  PRIVATE
 	${CMAKE_CURRENT_LIST_DIR}/src
+	${CMAKE_CURRENT_LIST_DIR}/src/cnn
 	${CMAKE_CURRENT_LIST_DIR}/lib
+	${CMAKE_CURRENT_LIST_DIR}/res
 	${JPEG_INCLUDE_DIRS}
 	${LIBCAMERA_INCLUDE_DIRS}
 	${GSTREAMER_INCLUDE_DIRS}
@@ -44,4 +49,8 @@ target_link_libraries(Weed-Spotter  PRIVATE
 target_compile_options(Weed-Spotter PRIVATE
 	${LIBCAMERA_CFLAGS_OTHER}
 	${PIGPIO_CFLAGS_OTHER}
+	-O3
+	-mfpu=neon
+	-ftree-vectorize
+	-march=armv8-a
 )
