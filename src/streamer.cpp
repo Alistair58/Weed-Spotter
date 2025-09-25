@@ -1,5 +1,8 @@
 #include "streamer.hpp"
-
+#include <iostream>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 Streamer::Streamer(int *argcPtr,char ***argvPtr,int parentPipefd[2]){
 	close(parentPipefd[0]);

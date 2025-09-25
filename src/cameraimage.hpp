@@ -1,12 +1,8 @@
 #ifndef CAMERAIMAGE_HPP
 #define CAMERAIMAGE_HPP
 
-#include <iostream>
-#include <fstream>
 #include <memory>
 #include <exception>
-#include <stdio.h>
-#include <jpeglib.h>
 
 class CameraImage{
 	public:

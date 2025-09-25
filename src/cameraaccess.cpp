@@ -1,4 +1,14 @@
 #include "cameraaccess.hpp"
+#include <libcamera/camera.h>
+#include <libcamera/formats.h>
+#include <iostream>
+#include <fstream>
+#include <memory>
+#include <exception>
+#include <vector>
+#include <sys/mman.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 using namespace libcamera;
 

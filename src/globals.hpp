@@ -1,6 +1,9 @@
 #ifndef GLOBALS_HPP
 #define GLOBALS_HPP
 
+#include <vector>
+#include <string>
+
 extern const std::string ANSI_RED;
 extern const std::string ANSI_RESET;
 extern const std::string ANSI_GREEN;

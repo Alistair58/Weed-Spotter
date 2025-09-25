@@ -49,8 +49,8 @@ target_link_libraries(Weed-Spotter  PRIVATE
 target_compile_options(Weed-Spotter PRIVATE
 	${LIBCAMERA_CFLAGS_OTHER}
 	${PIGPIO_CFLAGS_OTHER}
-	-O3
-	-mfpu=neon
-	-ftree-vectorize
-	-march=armv8-a
+	#TODO -O3
+	-march=armv8-a+simd
+	#TODO -ftree-vectorize
+	#TODO -funroll-loops
 )

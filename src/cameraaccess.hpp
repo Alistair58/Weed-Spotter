@@ -2,22 +2,13 @@
 #define CAMERAACCESS_HPP
 
 #include <libcamera/libcamera.h>
+#include <libcamera/controls.h>
 #include <libcamera/camera_manager.h>
-#include <libcamera/camera.h>
 #include <libcamera/request.h>
 #include <libcamera/stream.h>
-#include <libcamera/formats.h>
 #include <libcamera/framebuffer.h>
 #include <libcamera/base/signal.h>
-#include <iostream>
-#include <fstream>
-#include <memory>
-#include <exception>
-#include <vector>
 #include <future>
-#include <sys/mman.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include "cameraimage.hpp"
 
 

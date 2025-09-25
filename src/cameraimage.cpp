@@ -1,5 +1,8 @@
 #include "cameraimage.hpp"
-
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+#include <jpeglib.h>
 
 CameraImage CameraImage::YUYVToRGB(uint8_t *data,int height,int width){
 	int dataSize = width*height*2;

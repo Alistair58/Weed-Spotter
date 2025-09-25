@@ -1,11 +1,13 @@
 #ifndef CNN_HPP
 #define CNN_HPP
 
-#include <string>
-#include <unordered_map>
+#include "globals.hpp"
+#include <vector>
 #include "tensor.hpp"
 #include "cnnutils.hpp"
-#include <arm_neon.h>
+#if PROFILING
+	#include "timer.hpp"
+#endif
 
 class CNN : public CnnUtils{
     public:
@@ -13,11 +15,11 @@ class CNN : public CnnUtils{
         //Creating a fresh CNN
         CNN(d2& pixelStats);
         //Creating a copy from an original CNN
-        CNN(CNN *original);
+        CNN(CNN *original,bool deepCopyWeights);
     
         //KEY METHODS 
         //returns {weedX,weedY,hasWeedProbability}
-        std::vector<float> forwards(Tensor& imageInt,bool training
+        std::vector<float> forwards(Tensor& imageInt
         #if PROFILING
             ,Timer *parentTimer = nullptr
         #endif 

@@ -10,6 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alistair/Weed-Spotter/src/cameraaccess.cpp" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/cameraimage.cpp" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o.d"
+  "/home/alistair/Weed-Spotter/src/cnn/cnn.cpp" "CMakeFiles/Weed-Spotter.dir/src/cnn/cnn.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cnn/cnn.cpp.o.d"
+  "/home/alistair/Weed-Spotter/src/cnn/cnnutils.cpp" "CMakeFiles/Weed-Spotter.dir/src/cnn/cnnutils.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cnn/cnnutils.cpp.o.d"
+  "/home/alistair/Weed-Spotter/src/cnn/tensor.cpp" "CMakeFiles/Weed-Spotter.dir/src/cnn/tensor.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/cnn/tensor.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/httpserver.cpp" "CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/main.cpp" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/picoi2c.cpp" "CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.o.d"

@@ -1,5 +1,14 @@
 #include "httpserver.hpp"
 
+#include <signal.h>
+#include <unistd.h>
+#include <iostream>
+#include <sys/types.h>
+#include <cstring>
+#include <string>
+#include <regex>
+#include <filesystem>
+#include <climits>
 
 static pid_t rpicamPid;
 static int photoId = -1;

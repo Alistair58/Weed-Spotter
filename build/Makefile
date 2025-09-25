@@ -177,6 +177,78 @@ src/cameraimage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.s
 .PHONY : src/cameraimage.cpp.s
 
+src/cnn/cnn.o: src/cnn/cnn.cpp.o
+.PHONY : src/cnn/cnn.o
+
+# target to build an object file
+src/cnn/cnn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/cnn.cpp.o
+.PHONY : src/cnn/cnn.cpp.o
+
+src/cnn/cnn.i: src/cnn/cnn.cpp.i
+.PHONY : src/cnn/cnn.i
+
+# target to preprocess a source file
+src/cnn/cnn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/cnn.cpp.i
+.PHONY : src/cnn/cnn.cpp.i
+
+src/cnn/cnn.s: src/cnn/cnn.cpp.s
+.PHONY : src/cnn/cnn.s
+
+# target to generate assembly for a file
+src/cnn/cnn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/cnn.cpp.s
+.PHONY : src/cnn/cnn.cpp.s
+
+src/cnn/cnnutils.o: src/cnn/cnnutils.cpp.o
+.PHONY : src/cnn/cnnutils.o
+
+# target to build an object file
+src/cnn/cnnutils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/cnnutils.cpp.o
+.PHONY : src/cnn/cnnutils.cpp.o
+
+src/cnn/cnnutils.i: src/cnn/cnnutils.cpp.i
+.PHONY : src/cnn/cnnutils.i
+
+# target to preprocess a source file
+src/cnn/cnnutils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/cnnutils.cpp.i
+.PHONY : src/cnn/cnnutils.cpp.i
+
+src/cnn/cnnutils.s: src/cnn/cnnutils.cpp.s
+.PHONY : src/cnn/cnnutils.s
+
+# target to generate assembly for a file
+src/cnn/cnnutils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/cnnutils.cpp.s
+.PHONY : src/cnn/cnnutils.cpp.s
+
+src/cnn/tensor.o: src/cnn/tensor.cpp.o
+.PHONY : src/cnn/tensor.o
+
+# target to build an object file
+src/cnn/tensor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/tensor.cpp.o
+.PHONY : src/cnn/tensor.cpp.o
+
+src/cnn/tensor.i: src/cnn/tensor.cpp.i
+.PHONY : src/cnn/tensor.i
+
+# target to preprocess a source file
+src/cnn/tensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/tensor.cpp.i
+.PHONY : src/cnn/tensor.cpp.i
+
+src/cnn/tensor.s: src/cnn/tensor.cpp.s
+.PHONY : src/cnn/tensor.s
+
+# target to generate assembly for a file
+src/cnn/tensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/cnn/tensor.cpp.s
+.PHONY : src/cnn/tensor.cpp.s
+
 src/httpserver.o: src/httpserver.cpp.o
 .PHONY : src/httpserver.o
 
@@ -288,6 +360,15 @@ help:
 	@echo "... src/cameraimage.o"
 	@echo "... src/cameraimage.i"
 	@echo "... src/cameraimage.s"
+	@echo "... src/cnn/cnn.o"
+	@echo "... src/cnn/cnn.i"
+	@echo "... src/cnn/cnn.s"
+	@echo "... src/cnn/cnnutils.o"
+	@echo "... src/cnn/cnnutils.i"
+	@echo "... src/cnn/cnnutils.s"
+	@echo "... src/cnn/tensor.o"
+	@echo "... src/cnn/tensor.i"
+	@echo "... src/cnn/tensor.s"
 	@echo "... src/httpserver.o"
 	@echo "... src/httpserver.i"
 	@echo "... src/httpserver.s"

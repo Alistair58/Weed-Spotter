@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DCIVETWEB_CXX_DLL_IMPORTS -DCIVETWEB_DLL_IMPORTS
 
-CXX_INCLUDES = -I/home/alistair/Weed-Spotter/src -I/home/alistair/Weed-Spotter/lib -I/usr/include/libcamera -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/aarch64-linux-gnu/glib-2.0/include -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0
+CXX_INCLUDES = -I/home/alistair/Weed-Spotter/src -I/home/alistair/Weed-Spotter/src/cnn -I/home/alistair/Weed-Spotter/lib -I/home/alistair/Weed-Spotter/res -I/usr/include/libcamera -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/aarch64-linux-gnu/glib-2.0/include -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -march=armv8-a+simd -std=gnu++20
 

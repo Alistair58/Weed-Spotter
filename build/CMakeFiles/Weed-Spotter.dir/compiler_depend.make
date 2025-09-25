@@ -306,11 +306,6 @@ CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: /home/alistair/Weed-Spotter/
   /usr/include/libcamera/libcamera/property_ids.h \
   /usr/include/libcamera/libcamera/transform.h \
   /usr/include/libcamera/libcamera/version.h \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
   /usr/include/c++/12/future \
   /usr/include/c++/12/mutex \
   /usr/include/c++/12/bits/chrono.h \
@@ -330,6 +325,12 @@ CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: /home/alistair/Weed-Spotter/
   /usr/include/semaphore.h \
   /usr/include/aarch64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/12/bits/atomic_futex.h \
+  /home/alistair/Weed-Spotter/src/cameraimage.hpp \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
   /usr/include/aarch64-linux-gnu/sys/mman.h \
   /usr/include/aarch64-linux-gnu/bits/mman.h \
   /usr/include/aarch64-linux-gnu/bits/mman-map-flags-generic.h \
@@ -342,15 +343,538 @@ CMakeFiles/Weed-Spotter.dir/src/cameraaccess.cpp.o: /home/alistair/Weed-Spotter/
   /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/linux/falloc.h \
   /usr/include/aarch64-linux-gnu/bits/stat.h \
-  /usr/include/aarch64-linux-gnu/bits/struct_stat.h \
-  /home/alistair/Weed-Spotter/src/cameraimage.hpp \
-  /usr/include/jpeglib.h \
-  /usr/include/aarch64-linux-gnu/jconfig.h \
-  /usr/include/jmorecfg.h
+  /usr/include/aarch64-linux-gnu/bits/struct_stat.h
 
 CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: /home/alistair/Weed-Spotter/src/cameraimage.cpp \
   /usr/include/stdc-predef.h \
   /home/alistair/Weed-Spotter/src/cameraimage.hpp \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
+  /usr/include/aarch64-linux-gnu/bits/timesize.h \
+  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
+  /usr/include/aarch64-linux-gnu/bits/long-double.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/cpu_defines.h \
+  /usr/include/c++/12/pstl/pstl_config.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/type_traits \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/concepts \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/iterator_concepts.h \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/ranges_cmp.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/aarch64-linux-gnu/bits/types.h \
+  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
+  /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/iosfwd \
+  /usr/include/c++/12/bits/stringfwd.h \
+  /usr/include/c++/12/bits/postypes.h \
+  /usr/include/c++/12/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h \
+  /usr/include/aarch64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/bits/char_traits.h \
+  /usr/include/c++/12/cstdint \
+  /usr/include/c++/12/bits/localefwd.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++locale.h \
+  /usr/include/c++/12/clocale \
+  /usr/include/locale.h \
+  /usr/include/aarch64-linux-gnu/bits/locale.h \
+  /usr/include/c++/12/cctype \
+  /usr/include/ctype.h \
+  /usr/include/aarch64-linux-gnu/bits/endian.h \
+  /usr/include/aarch64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/aarch64-linux-gnu/bits/types/time_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/aarch64-linux-gnu/bits/sched.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/aarch64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/aarch64-linux-gnu/bits/time.h \
+  /usr/include/aarch64-linux-gnu/bits/timex.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/aarch64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/aarch64-linux-gnu/bits/setjmp.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/string \
+  /usr/include/c++/12/bits/ostream_insert.h \
+  /usr/include/c++/12/bits/cxxabi_forced.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/bits/basic_string.h \
+  /usr/include/c++/12/string_view \
+  /usr/include/c++/12/bits/ranges_base.h \
+  /usr/include/c++/12/bits/max_size_type.h \
+  /usr/include/c++/12/numbers \
+  /usr/include/c++/12/bits/string_view.tcc \
+  /usr/include/c++/12/ext/string_conversions.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/aarch64-linux-gnu/bits/waitflags.h \
+  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
+  /usr/include/aarch64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/aarch64-linux-gnu/bits/byteswap.h \
+  /usr/include/aarch64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/aarch64-linux-gnu/sys/select.h \
+  /usr/include/aarch64-linux-gnu/bits/select.h \
+  /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
+  /usr/include/c++/12/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/12/cerrno \
+  /usr/include/errno.h \
+  /usr/include/aarch64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/lib/linux/uapi/arm64/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/12/bits/charconv.h \
+  /usr/include/c++/12/bits/basic_string.tcc \
+  /usr/include/c++/12/bits/locale_classes.tcc \
+  /usr/include/c++/12/system_error \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h \
+  /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/streambuf \
+  /usr/include/c++/12/bits/streambuf.tcc \
+  /usr/include/c++/12/bits/basic_ios.h \
+  /usr/include/c++/12/bits/locale_facets.h \
+  /usr/include/c++/12/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
+  /usr/include/c++/12/bits/streambuf_iterator.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
+  /usr/include/c++/12/bits/locale_facets.tcc \
+  /usr/include/c++/12/bits/basic_ios.tcc \
+  /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/atomic_wait.h \
+  /usr/include/c++/12/climits \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/limits.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/aarch64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/aarch64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+  /usr/include/aarch64-linux-gnu/bits/environments.h \
+  /usr/include/aarch64-linux-gnu/bits/confname.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
+  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/aarch64-linux-gnu/sys/syscall.h \
+  /usr/lib/linux/uapi/arm64/asm/unistd.h \
+  /usr/lib/linux/uapi/arm64/asm/unistd_64.h \
+  /usr/include/aarch64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/bits/ranges_uninitialized.h \
+  /usr/include/c++/12/bits/ranges_algobase.h \
+  /usr/include/c++/12/bits/uses_allocator_args.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/fstream \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc \
+  /usr/include/jpeglib.h \
+  /usr/include/aarch64-linux-gnu/jconfig.h \
+  /usr/include/jmorecfg.h
+
+CMakeFiles/Weed-Spotter.dir/src/cnn/cnn.cpp.o: /home/alistair/Weed-Spotter/src/cnn/cnn.cpp \
+  /usr/include/stdc-predef.h \
+  /home/alistair/Weed-Spotter/src/cnn/cnn.hpp \
+  /home/alistair/Weed-Spotter/src/globals.hpp \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_algobase.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
+  /usr/include/aarch64-linux-gnu/bits/timesize.h \
+  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
+  /usr/include/aarch64-linux-gnu/bits/long-double.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/cpu_defines.h \
+  /usr/include/c++/12/pstl/pstl_config.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/type_traits \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/concepts \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/iterator_concepts.h \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/ranges_cmp.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/initializer_list \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/hash_bytes.h \
+  /usr/include/c++/12/bits/refwrap.h \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/range_access.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/string \
+  /usr/include/c++/12/bits/stringfwd.h \
+  /usr/include/c++/12/bits/char_traits.h \
+  /usr/include/c++/12/bits/postypes.h \
+  /usr/include/c++/12/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h \
+  /usr/include/aarch64-linux-gnu/bits/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/12/cstdint \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/aarch64-linux-gnu/bits/types.h \
+  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
+  /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/localefwd.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++locale.h \
+  /usr/include/c++/12/clocale \
+  /usr/include/locale.h \
+  /usr/include/aarch64-linux-gnu/bits/locale.h \
+  /usr/include/c++/12/iosfwd \
+  /usr/include/c++/12/cctype \
+  /usr/include/ctype.h \
+  /usr/include/aarch64-linux-gnu/bits/endian.h \
+  /usr/include/aarch64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/12/bits/ostream_insert.h \
+  /usr/include/c++/12/bits/cxxabi_forced.h \
+  /usr/include/c++/12/bits/basic_string.h \
+  /usr/include/c++/12/string_view \
+  /usr/include/c++/12/bits/ranges_base.h \
+  /usr/include/c++/12/bits/max_size_type.h \
+  /usr/include/c++/12/numbers \
+  /usr/include/c++/12/bits/string_view.tcc \
+  /usr/include/c++/12/ext/string_conversions.h \
+  /usr/include/c++/12/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/aarch64-linux-gnu/bits/waitflags.h \
+  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
+  /usr/include/aarch64-linux-gnu/sys/types.h \
+  /usr/include/aarch64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/time_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/endian.h \
+  /usr/include/aarch64-linux-gnu/bits/byteswap.h \
+  /usr/include/aarch64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/aarch64-linux-gnu/sys/select.h \
+  /usr/include/aarch64-linux-gnu/bits/select.h \
+  /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/12/bits/std_abs.h \
+  /usr/include/c++/12/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/12/cerrno \
+  /usr/include/errno.h \
+  /usr/include/aarch64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/lib/linux/uapi/arm64/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/aarch64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/12/bits/charconv.h \
+  /usr/include/c++/12/bits/basic_string.tcc \
+  /home/alistair/Weed-Spotter/src/cnn/tensor.hpp \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/stdexcept \
+  /usr/include/c++/12/exception \
+  /usr/include/c++/12/bits/exception_ptr.h \
+  /usr/include/c++/12/bits/cxxabi_init_exception.h \
+  /usr/include/c++/12/typeinfo \
+  /usr/include/c++/12/bits/nested_exception.h \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/ostream \
+  /usr/include/c++/12/ios \
+  /usr/include/c++/12/bits/ios_base.h \
+  /usr/include/c++/12/ext/atomicity.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/gthr.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/aarch64-linux-gnu/bits/sched.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/aarch64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/aarch64-linux-gnu/bits/time.h \
+  /usr/include/aarch64-linux-gnu/bits/timex.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/aarch64-linux-gnu/bits/setjmp.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+  /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/12/bits/locale_classes.h \
+  /usr/include/c++/12/bits/locale_classes.tcc \
+  /usr/include/c++/12/system_error \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h \
+  /usr/include/c++/12/streambuf \
+  /usr/include/c++/12/bits/streambuf.tcc \
+  /usr/include/c++/12/bits/basic_ios.h \
+  /usr/include/c++/12/bits/locale_facets.h \
+  /usr/include/c++/12/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/aarch64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
+  /usr/include/c++/12/bits/streambuf_iterator.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
+  /usr/include/c++/12/bits/locale_facets.tcc \
+  /usr/include/c++/12/bits/basic_ios.tcc \
+  /usr/include/c++/12/bits/ostream.tcc \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/bits/atomic_wait.h \
+  /usr/include/c++/12/climits \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/limits.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/aarch64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/aarch64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/uio_lim.h \
+  /usr/include/unistd.h \
+  /usr/include/aarch64-linux-gnu/bits/posix_opt.h \
+  /usr/include/aarch64-linux-gnu/bits/environments.h \
+  /usr/include/aarch64-linux-gnu/bits/confname.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
+  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/syscall.h \
+  /usr/include/aarch64-linux-gnu/sys/syscall.h \
+  /usr/lib/linux/uapi/arm64/asm/unistd.h \
+  /usr/lib/linux/uapi/arm64/asm/unistd_64.h \
+  /usr/include/aarch64-linux-gnu/bits/syscall.h \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/bits/ranges_uninitialized.h \
+  /usr/include/c++/12/bits/ranges_algobase.h \
+  /usr/include/c++/12/bits/uses_allocator_args.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /home/alistair/Weed-Spotter/src/cnn/cnnutils.hpp \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_bf16.h
+
+CMakeFiles/Weed-Spotter.dir/src/cnn/cnnutils.cpp.o: /home/alistair/Weed-Spotter/src/cnn/cnnutils.cpp \
+  /usr/include/stdc-predef.h \
+  /home/alistair/Weed-Spotter/src/cnn/cnnutils.hpp \
   /usr/include/c++/12/iostream \
   /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
@@ -539,13 +1063,40 @@ CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: /home/alistair/Weed-Spotter/s
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  /usr/include/c++/12/memory \
+  /usr/include/c++/12/vector \
   /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/limits \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  /home/alistair/Weed-Spotter/src/globals.hpp \
+  /home/alistair/Weed-Spotter/src/cnn/tensor.hpp \
+  /usr/include/c++/12/stdlib.h \
+  /usr/include/c++/12/memory \
   /usr/include/c++/12/bits/stl_tempbuf.h \
   /usr/include/c++/12/bits/stl_raw_storage_iter.h \
   /usr/include/c++/12/bits/align.h \
@@ -592,14 +1143,102 @@ CMakeFiles/Weed-Spotter.dir/src/cameraimage.cpp.o: /home/alistair/Weed-Spotter/s
   /usr/include/c++/12/bits/uses_allocator_args.h \
   /usr/include/c++/12/pstl/glue_memory_defs.h \
   /usr/include/c++/12/pstl/execution_defs.h \
-  /usr/include/jpeglib.h \
-  /usr/include/aarch64-linux-gnu/jconfig.h \
-  /usr/include/jmorecfg.h
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_bf16.h \
+  /home/alistair/Weed-Spotter/src/cnn/cnn.hpp \
+  /home/alistair/Weed-Spotter/lib/json.hpp \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/bits/ranges_algo.h \
+  /usr/include/c++/12/bits/ranges_util.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/chrono.h \
+  /usr/include/c++/12/ratio \
+  /usr/include/c++/12/ctime \
+  /usr/include/c++/12/bits/parse_numbers.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  /usr/include/c++/12/random \
+  /usr/include/c++/12/bits/random.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/opt_random.h \
+  /usr/include/c++/12/bits/random.tcc \
+  /usr/include/c++/12/fstream \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc
 
 CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/src/httpserver.cpp \
   /usr/include/stdc-predef.h \
   /home/alistair/Weed-Spotter/src/httpserver.hpp \
-  /usr/include/signal.h \
+  /usr/include/civetweb.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
+  /usr/include/stdio.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -608,9 +1247,21 @@ CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/sr
   /usr/include/aarch64-linux-gnu/bits/long-double.h \
   /usr/include/aarch64-linux-gnu/gnu/stubs.h \
   /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h \
   /usr/include/aarch64-linux-gnu/bits/types.h \
   /usr/include/aarch64-linux-gnu/bits/typesizes.h \
   /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
+  /usr/include/signal.h \
   /usr/include/aarch64-linux-gnu/bits/signum-generic.h \
   /usr/include/aarch64-linux-gnu/bits/signum-arch.h \
   /usr/include/aarch64-linux-gnu/bits/types/sig_atomic_t.h \
@@ -642,7 +1293,6 @@ CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/sr
   /usr/lib/linux/uapi/arm64/asm/posix_types.h \
   /usr/include/asm-generic/posix_types.h \
   /usr/lib/linux/uapi/arm64/asm/sve_context.h \
-  /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
   /usr/include/aarch64-linux-gnu/bits/types/stack_t.h \
   /usr/include/aarch64-linux-gnu/sys/ucontext.h \
   /usr/include/aarch64-linux-gnu/sys/procfs.h \
@@ -696,16 +1346,9 @@ CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/sr
   /usr/include/c++/12/bits/postypes.h \
   /usr/include/c++/12/cwchar \
   /usr/include/wchar.h \
-  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/aarch64-linux-gnu/bits/floatn.h \
-  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h \
   /usr/include/aarch64-linux-gnu/bits/wchar.h \
   /usr/include/aarch64-linux-gnu/bits/types/wint_t.h \
   /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/aarch64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/aarch64-linux-gnu/bits/types/FILE.h \
   /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
   /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/c++/12/exception \
@@ -801,12 +1444,6 @@ CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/sr
   /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
-  /usr/include/stdio.h \
-  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/aarch64-linux-gnu/bits/errno.h \
@@ -836,7 +1473,6 @@ CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/sr
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
   /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/civetweb.h \
   /usr/include/c++/12/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -919,7 +1555,8 @@ CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o: /home/alistair/Weed-Spotter/sr
 CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main.cpp \
   /usr/include/stdc-predef.h \
   /home/alistair/Weed-Spotter/src/cameraimage.hpp \
-  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_algobase.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
   /usr/include/features.h \
@@ -932,20 +1569,69 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/cpu_defines.h \
   /usr/include/c++/12/pstl/pstl_config.h \
+  /usr/include/c++/12/bits/functexcept.h \
+  /usr/include/c++/12/bits/exception_defines.h \
+  /usr/include/c++/12/bits/cpp_type_traits.h \
+  /usr/include/c++/12/ext/type_traits.h \
+  /usr/include/c++/12/ext/numeric_traits.h \
+  /usr/include/c++/12/bits/stl_pair.h \
+  /usr/include/c++/12/type_traits \
+  /usr/include/c++/12/bits/move.h \
+  /usr/include/c++/12/bits/utility.h \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/concepts \
+  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+  /usr/include/c++/12/bits/iterator_concepts.h \
+  /usr/include/c++/12/bits/ptr_traits.h \
+  /usr/include/c++/12/bits/ranges_cmp.h \
+  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/12/bits/concept_check.h \
+  /usr/include/c++/12/debug/assertions.h \
+  /usr/include/c++/12/bits/stl_iterator.h \
+  /usr/include/c++/12/new \
+  /usr/include/c++/12/bits/exception.h \
+  /usr/include/c++/12/bits/stl_construct.h \
+  /usr/include/c++/12/debug/debug.h \
+  /usr/include/c++/12/bits/predefined_ops.h \
+  /usr/include/c++/12/bits/allocator.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++allocator.h \
+  /usr/include/c++/12/bits/new_allocator.h \
+  /usr/include/c++/12/bits/memoryfwd.h \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/ext/alloc_traits.h \
+  /usr/include/c++/12/bits/alloc_traits.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/aarch64-linux-gnu/bits/types.h \
+  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
+  /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/wchar.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/12/bits/uses_allocator.h \
+  /usr/include/c++/12/bits/unique_ptr.h \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/invoke.h \
+  /usr/include/c++/12/bits/stl_function.h \
+  /usr/include/c++/12/backward/binders.h \
+  /usr/include/c++/12/bits/functional_hash.h \
+  /usr/include/c++/12/bits/hash_bytes.h \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
   /usr/include/c++/12/iosfwd \
   /usr/include/c++/12/bits/stringfwd.h \
-  /usr/include/c++/12/bits/memoryfwd.h \
   /usr/include/c++/12/bits/postypes.h \
   /usr/include/c++/12/cwchar \
   /usr/include/wchar.h \
-  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
   /usr/include/aarch64-linux-gnu/bits/floatn.h \
   /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h \
-  /usr/include/aarch64-linux-gnu/bits/wchar.h \
   /usr/include/aarch64-linux-gnu/bits/types/wint_t.h \
   /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h \
@@ -954,35 +1640,12 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
   /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/c++/12/exception \
-  /usr/include/c++/12/bits/exception.h \
   /usr/include/c++/12/bits/exception_ptr.h \
-  /usr/include/c++/12/bits/exception_defines.h \
   /usr/include/c++/12/bits/cxxabi_init_exception.h \
   /usr/include/c++/12/typeinfo \
-  /usr/include/c++/12/bits/hash_bytes.h \
-  /usr/include/c++/12/new \
-  /usr/include/c++/12/bits/move.h \
-  /usr/include/c++/12/type_traits \
   /usr/include/c++/12/bits/nested_exception.h \
   /usr/include/c++/12/bits/char_traits.h \
-  /usr/include/c++/12/compare \
-  /usr/include/c++/12/concepts \
-  /usr/include/c++/12/bits/stl_construct.h \
-  /usr/include/c++/12/bits/stl_iterator_base_types.h \
-  /usr/include/c++/12/bits/iterator_concepts.h \
-  /usr/include/c++/12/bits/ptr_traits.h \
-  /usr/include/c++/12/bits/ranges_cmp.h \
-  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/12/bits/concept_check.h \
-  /usr/include/c++/12/debug/assertions.h \
   /usr/include/c++/12/cstdint \
-  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/aarch64-linux-gnu/bits/types.h \
-  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
-  /usr/include/aarch64-linux-gnu/bits/time64.h \
-  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/c++/12/bits/localefwd.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/c++locale.h \
   /usr/include/c++/12/clocale \
@@ -1026,32 +1689,13 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/aarch64-linux-gnu/sys/single_threaded.h \
   /usr/include/c++/12/bits/locale_classes.h \
   /usr/include/c++/12/string \
-  /usr/include/c++/12/bits/allocator.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/c++allocator.h \
-  /usr/include/c++/12/bits/new_allocator.h \
-  /usr/include/c++/12/bits/functexcept.h \
-  /usr/include/c++/12/bits/cpp_type_traits.h \
   /usr/include/c++/12/bits/ostream_insert.h \
   /usr/include/c++/12/bits/cxxabi_forced.h \
-  /usr/include/c++/12/bits/stl_iterator.h \
-  /usr/include/c++/12/ext/type_traits.h \
-  /usr/include/c++/12/bits/stl_function.h \
-  /usr/include/c++/12/backward/binders.h \
-  /usr/include/c++/12/ext/numeric_traits.h \
-  /usr/include/c++/12/bits/stl_algobase.h \
-  /usr/include/c++/12/bits/stl_pair.h \
-  /usr/include/c++/12/bits/utility.h \
-  /usr/include/c++/12/debug/debug.h \
-  /usr/include/c++/12/bits/predefined_ops.h \
   /usr/include/c++/12/bits/refwrap.h \
-  /usr/include/c++/12/bits/invoke.h \
   /usr/include/c++/12/bits/range_access.h \
   /usr/include/c++/12/initializer_list \
   /usr/include/c++/12/bits/basic_string.h \
-  /usr/include/c++/12/ext/alloc_traits.h \
-  /usr/include/c++/12/bits/alloc_traits.h \
   /usr/include/c++/12/string_view \
-  /usr/include/c++/12/bits/functional_hash.h \
   /usr/include/c++/12/bits/ranges_base.h \
   /usr/include/c++/12/bits/max_size_type.h \
   /usr/include/c++/12/numbers \
@@ -1105,22 +1749,6 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/c++/12/bits/locale_facets.tcc \
   /usr/include/c++/12/bits/basic_ios.tcc \
   /usr/include/c++/12/bits/ostream.tcc \
-  /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc \
-  /usr/include/c++/12/fstream \
-  /usr/include/c++/12/bits/codecvt.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
-  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
-  /usr/include/c++/12/bits/fstream.tcc \
-  /usr/include/c++/12/memory \
-  /usr/include/c++/12/bits/stl_uninitialized.h \
-  /usr/include/c++/12/bits/stl_tempbuf.h \
-  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/12/bits/align.h \
-  /usr/include/c++/12/bit \
-  /usr/include/c++/12/bits/uses_allocator.h \
-  /usr/include/c++/12/bits/unique_ptr.h \
-  /usr/include/c++/12/tuple \
   /usr/include/c++/12/bits/shared_ptr.h \
   /usr/include/c++/12/bits/shared_ptr_base.h \
   /usr/include/c++/12/bits/allocated_ptr.h \
@@ -1160,9 +1788,6 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/c++/12/bits/uses_allocator_args.h \
   /usr/include/c++/12/pstl/glue_memory_defs.h \
   /usr/include/c++/12/pstl/execution_defs.h \
-  /usr/include/jpeglib.h \
-  /usr/include/aarch64-linux-gnu/jconfig.h \
-  /usr/include/jmorecfg.h \
   /home/alistair/Weed-Spotter/src/cameraaccess.hpp \
   /usr/include/libcamera/libcamera/libcamera.h \
   /usr/include/libcamera/libcamera/camera.h \
@@ -1214,6 +1839,9 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/c++/12/bits/ranges_util.h \
   /usr/include/c++/12/pstl/glue_algorithm_defs.h \
   /usr/include/libcamera/libcamera/orientation.h \
+  /usr/include/c++/12/iostream \
+  /usr/include/c++/12/istream \
+  /usr/include/c++/12/bits/istream.tcc \
   /usr/include/libcamera/libcamera/request.h \
   /usr/include/libcamera/libcamera/fence.h \
   /usr/include/libcamera/libcamera/base/unique_fd.h \
@@ -1249,19 +1877,6 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/semaphore.h \
   /usr/include/aarch64-linux-gnu/bits/semaphore.h \
   /usr/include/c++/12/bits/atomic_futex.h \
-  /usr/include/aarch64-linux-gnu/sys/mman.h \
-  /usr/include/aarch64-linux-gnu/bits/mman.h \
-  /usr/include/aarch64-linux-gnu/bits/mman-map-flags-generic.h \
-  /usr/include/aarch64-linux-gnu/bits/mman-linux.h \
-  /usr/include/aarch64-linux-gnu/bits/mman-shared.h \
-  /usr/include/aarch64-linux-gnu/bits/mman_ext.h \
-  /usr/include/fcntl.h \
-  /usr/include/aarch64-linux-gnu/bits/fcntl.h \
-  /usr/include/aarch64-linux-gnu/bits/fcntl-linux.h \
-  /usr/include/aarch64-linux-gnu/bits/types/struct_iovec.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/aarch64-linux-gnu/bits/stat.h \
-  /usr/include/aarch64-linux-gnu/bits/struct_stat.h \
   /home/alistair/Weed-Spotter/src/streamer.hpp \
   /usr/include/gstreamer-1.0/gst/gst.h \
   /usr/include/glib-2.0/glib.h \
@@ -1719,49 +2334,88 @@ CMakeFiles/Weed-Spotter.dir/src/main.cpp.o: /home/alistair/Weed-Spotter/src/main
   /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-media-factory.h \
   /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-media.h \
   /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-server.h \
-  /usr/include/aarch64-linux-gnu/sys/wait.h \
-  /usr/include/aarch64-linux-gnu/bits/types/idtype_t.h \
   /home/alistair/Weed-Spotter/src/httpserver.hpp \
   /usr/include/civetweb.h \
+  /home/alistair/Weed-Spotter/src/picoi2c.hpp \
+  /usr/include/gstreamer-1.0/gst/app/gstappsink.h \
+  /usr/include/gstreamer-1.0/gst/app/app-prelude.h \
+  /home/alistair/Weed-Spotter/src/cnn/cnn.hpp \
+  /home/alistair/Weed-Spotter/src/globals.hpp \
+  /home/alistair/Weed-Spotter/src/cnn/tensor.hpp \
   /usr/include/c++/12/cstring \
-  /usr/include/c++/12/regex \
-  /usr/include/c++/12/bitset \
+  /home/alistair/Weed-Spotter/src/cnn/cnnutils.hpp \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h \
+  /usr/lib/gcc/aarch64-linux-gnu/12/include/arm_bf16.h \
+  /home/alistair/Weed-Spotter/lib/json.hpp \
+  /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/cassert \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/fs_path.h \
   /usr/include/c++/12/locale \
   /usr/include/c++/12/bits/locale_facets_nonio.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
   /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
   /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
   /usr/include/c++/12/bits/locale_facets_nonio.tcc \
   /usr/include/c++/12/bits/locale_conv.h \
-  /usr/include/c++/12/sstream \
-  /usr/include/c++/12/bits/sstream.tcc \
-  /usr/include/c++/12/stack \
-  /usr/include/c++/12/deque \
-  /usr/include/c++/12/bits/stl_deque.h \
-  /usr/include/c++/12/bits/deque.tcc \
-  /usr/include/c++/12/bits/stl_stack.h \
-  /usr/include/c++/12/bits/regex_constants.h \
-  /usr/include/c++/12/bits/regex_error.h \
-  /usr/include/c++/12/bits/regex_automaton.h \
-  /usr/include/c++/12/bits/regex_automaton.tcc \
-  /usr/include/c++/12/bits/regex_scanner.h \
-  /usr/include/c++/12/bits/regex_scanner.tcc \
-  /usr/include/c++/12/bits/regex_compiler.h \
-  /usr/include/c++/12/bits/regex_compiler.tcc \
-  /usr/include/c++/12/bits/regex.h \
-  /usr/include/c++/12/bits/regex.tcc \
-  /usr/include/c++/12/bits/regex_executor.h \
-  /usr/include/c++/12/bits/regex_executor.tcc \
-  /usr/include/c++/12/filesystem \
-  /usr/include/c++/12/bits/fs_fwd.h \
-  /usr/include/c++/12/bits/fs_path.h \
   /usr/include/c++/12/iomanip \
   /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/codecvt \
   /usr/include/c++/12/bits/fs_dir.h \
   /usr/include/c++/12/bits/fs_ops.h \
-  /home/alistair/Weed-Spotter/src/picoi2c.hpp \
-  /usr/include/pigpio.h
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/any \
+  /usr/include/c++/12/fstream \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
+  /usr/include/c++/12/bits/fstream.tcc
 
 CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.o: /home/alistair/Weed-Spotter/src/picoi2c.cpp \
   /usr/include/stdc-predef.h \
@@ -2636,17 +3290,17 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
   /usr/include/aarch64-linux-gnu/bits/types/idtype_t.h
 
 
-/home/alistair/Weed-Spotter/src/streamer.cpp:
-
-/home/alistair/Weed-Spotter/src/picoi2c.cpp:
-
-/usr/include/pigpio.h:
-
-/home/alistair/Weed-Spotter/src/picoi2c.hpp:
-
 /usr/include/aarch64-linux-gnu/bits/types/idtype_t.h:
 
 /usr/include/aarch64-linux-gnu/sys/wait.h:
+
+/home/alistair/Weed-Spotter/src/streamer.cpp:
+
+/usr/include/pigpio.h:
+
+/home/alistair/Weed-Spotter/src/picoi2c.cpp:
+
+/home/alistair/Weed-Spotter/src/picoi2c.hpp:
 
 /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-onvif-client.h:
 
@@ -2661,8 +3315,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-context.h:
 
 /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-thread-pool.h:
-
-/usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-address-pool.h:
 
 /usr/include/gstreamer-1.0/gst/base/gstpushsrc.h:
 
@@ -2834,13 +3486,13 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/glib-2.0/gio/gconverterinputstream.h:
 
-/usr/include/glib-2.0/gio/gconverter.h:
-
 /usr/include/glib-2.0/gio/gcharsetconverter.h:
 
 /usr/include/glib-2.0/gio/gfilteroutputstream.h:
 
 /usr/include/glib-2.0/gio/gbufferedoutputstream.h:
+
+/usr/include/gstreamer-1.0/gst/app/gstappsink.h:
 
 /usr/include/glib-2.0/gio/gbufferedinputstream.h:
 
@@ -2891,8 +3543,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/gstreamer-1.0/gst/gstparse.h:
 
 /usr/include/gstreamer-1.0/gst/gstutils.h:
-
-/usr/include/gstreamer-1.0/gst/gsttypefind.h:
 
 /usr/include/gstreamer-1.0/gst/gsttocsetter.h:
 
@@ -2976,8 +3626,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/gstreamer-1.0/gst/gstpad.h:
 
-/usr/include/gstreamer-1.0/gst/gstcontrolsource.h:
-
 /usr/include/gstreamer-1.0/gst/gstcontrolbinding.h:
 
 /usr/include/gstreamer-1.0/gst/gstghostpad.h:
@@ -2996,6 +3644,98 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/glib-2.0/gobject/gobject-autocleanups.h:
 
+/usr/include/glib-2.0/gobject/gvaluearray.h:
+
+/usr/include/glib-2.0/gobject/gtypemodule.h:
+
+/usr/include/glib-2.0/gobject/gsourceclosure.h:
+
+/usr/include/glib-2.0/gobject/gsignalgroup.h:
+
+/usr/include/glib-2.0/gio/gdbusserver.h:
+
+/usr/include/glib-2.0/gobject/gparamspecs.h:
+
+/usr/include/glib-2.0/gobject/genums.h:
+
+/usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-server-prelude.h:
+
+/usr/include/glib-2.0/gobject/gbindinggroup.h:
+
+/usr/include/glib-2.0/gobject/gboxed.h:
+
+/usr/include/glib-2.0/gobject/gmarshal.h:
+
+/usr/include/glib-2.0/gobject/gsignal.h:
+
+/usr/include/glib-2.0/gobject/gclosure.h:
+
+/usr/include/glib-2.0/gobject/gvalue.h:
+
+/usr/include/gstreamer-1.0/gst/gsttracer.h:
+
+/usr/include/gstreamer-1.0/gst/gstplugin.h:
+
+/usr/include/gstreamer-1.0/gst/gstenumtypes.h:
+
+/usr/include/glib-2.0/glib/glib-autocleanups.h:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:
+
+/usr/include/glib-2.0/gio/ginputstream.h:
+
+/usr/include/glib-2.0/glib/deprecated/grel.h:
+
+/usr/include/glib-2.0/glib/deprecated/gcompletion.h:
+
+/usr/include/glib-2.0/glib/deprecated/gcache.h:
+
+/usr/include/glib-2.0/glib/deprecated/gallocator.h:
+
+/usr/include/glib-2.0/glib/gversion.h:
+
+/usr/include/glib-2.0/glib/guuid.h:
+
+/usr/include/glib-2.0/glib/guri.h:
+
+/usr/include/glib-2.0/glib/gtree.h:
+
+/usr/include/glib-2.0/glib/gtrashstack.h:
+
+/usr/include/gstreamer-1.0/gst/app/app-prelude.h:
+
+/usr/include/glib-2.0/glib/gtestutils.h:
+
+/usr/include/glib-2.0/glib/gstrfuncs.h:
+
+/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
+
+/usr/include/glib-2.0/glib/gslice.h:
+
+/usr/include/glib-2.0/glib/gsequence.h:
+
+/usr/include/glib-2.0/glib/gscanner.h:
+
+/usr/include/glib-2.0/glib/grefstring.h:
+
+/usr/include/glib-2.0/glib/grefcount.h:
+
+/usr/include/glib-2.0/glib/grand.h:
+
+/usr/include/glib-2.0/glib/gqueue.h:
+
+/usr/include/glib-2.0/glib/gprimes.h:
+
+/usr/include/glib-2.0/glib/goption.h:
+
+/usr/include/glib-2.0/glib/gvarianttype.h:
+
+/usr/include/glib-2.0/gio/gfilenamecompleter.h:
+
+/usr/include/glib-2.0/glib/gvariant.h:
+
+/usr/include/glib-2.0/glib/gmarkup.h:
+
 /usr/include/glib-2.0/gio/gaction.h:
 
 /usr/include/gstreamer-1.0/gst/gstiterator.h:
@@ -3010,7 +3750,7 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/erase_if.h:
 
-/usr/include/c++/12/bits/atomic_timed_wait.h:
+/usr/include/c++/12/bits/valarray_array.h:
 
 /usr/include/c++/12/set:
 
@@ -3020,11 +3760,7 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/enable_special_members.h:
 
-/usr/include/c++/12/bits/ranges_algobase.h:
-
 /usr/include/c++/12/bits/std_mutex.h:
-
-/usr/include/glib-2.0/glib/deprecated/gallocator.h:
 
 /usr/include/aarch64-linux-gnu/bits/syscall.h:
 
@@ -3034,17 +3770,13 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/clocale:
 
-/usr/include/glib-2.0/gio/gdbusnamewatching.h:
-
-/usr/include/c++/12/bits/chrono.h:
-
 /usr/include/unistd.h:
 
 /usr/include/aarch64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/c++/12/bits/atomic_lockfree_defines.h:
 
-/usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
+/usr/include/c++/12/bits/gslice_array.h:
 
 /usr/include/glib-2.0/gio/gproxyaddressenumerator.h:
 
@@ -3063,6 +3795,10 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/c++/12/bits/streambuf_iterator.h:
 
 /usr/include/aarch64-linux-gnu/bits/mman-map-flags-generic.h:
+
+/usr/include/aarch64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/c++/12/forward_list:
 
 /usr/include/glib-2.0/glib/gdate.h:
 
@@ -3094,9 +3830,9 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/istream.tcc:
 
-/usr/include/linux/errno.h:
+/usr/include/c++/12/bits/valarray_array.tcc:
 
-/usr/include/glib-2.0/gobject/gsourceclosure.h:
+/usr/include/linux/errno.h:
 
 /usr/include/gstreamer-1.0/gst/net/gstnetaddressmeta.h:
 
@@ -3114,13 +3850,17 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/time.h:
 
+/usr/include/glib-2.0/glib/gpattern.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h:
+
 /usr/include/glib-2.0/glib/glib-typeof.h:
 
+/usr/include/glib-2.0/gobject/gparam.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
+
 /usr/lib/linux/uapi/arm64/asm/unistd_64.h:
-
-/usr/include/glib-2.0/glib/grefstring.h:
-
-/usr/include/glib-2.0/glib/guri.h:
 
 /usr/include/c++/12/cstdio:
 
@@ -3138,6 +3878,12 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/typeinfo:
 
+/usr/include/gstreamer-1.0/gst/gstbuffer.h:
+
+/usr/include/glib-2.0/glib/gstringchunk.h:
+
+/usr/lib/linux/uapi/arm64/asm/bitsperlong.h:
+
 /usr/include/c++/12/ext/concurrence.h:
 
 /usr/include/endian.h:
@@ -3145,8 +3891,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/c++/12/bits/string_view.tcc:
 
 /usr/include/stdint.h:
-
-/usr/include/c++/12/bits/predefined_ops.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
 
@@ -3158,11 +3902,7 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/alloc_traits.h:
 
-/usr/include/gstreamer-1.0/gst/gstcapsfeatures.h:
-
-/usr/include/c++/12/bits/vector.tcc:
-
-/usr/include/glib-2.0/glib/guuid.h:
+/usr/include/c++/12/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/12/bits/max_size_type.h:
 
@@ -3208,21 +3948,9 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/setjmp.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/glib-2.0/glib/gpattern.h:
-
-/usr/include/glib-2.0/glib/gstrfuncs.h:
-
 /usr/include/aarch64-linux-gnu/bits/types.h:
 
 /usr/include/c++/12/bits/fs_fwd.h:
-
-/usr/include/gstreamer-1.0/gst/gsttracer.h:
-
-/usr/include/gstreamer-1.0/gst/gstplugin.h:
-
-/usr/include/gstreamer-1.0/gst/gstenumtypes.h:
 
 /usr/include/glib-2.0/gio/gappinfo.h:
 
@@ -3248,8 +3976,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/fs_path.h:
 
-/usr/include/glib-2.0/gobject/gvalue.h:
-
 /usr/include/wchar.h:
 
 /usr/include/c++/12/bits/ranges_uninitialized.h:
@@ -3261,6 +3987,12 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/c++/12/bits/stl_stack.h:
 
 /usr/include/c++/12/streambuf:
+
+/usr/include/glib-2.0/glib/gqsort.h:
+
+/usr/include/c++/12/bits/uses_allocator_args.h:
+
+/usr/include/aarch64-linux-gnu/bits/timex.h:
 
 /usr/include/c++/12/iomanip:
 
@@ -3293,12 +4025,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/lib/gcc/aarch64-linux-gnu/12/include/float.h:
 
 /usr/include/c++/12/bits/locale_classes.tcc:
-
-/usr/include/gstreamer-1.0/gst/base/gstbitreader.h:
-
-/usr/include/glib-2.0/gio/gtlsinteraction.h:
-
-/usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/c++/12/bits/locale_facets_nonio.h:
 
@@ -3346,6 +4072,12 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/ext/type_traits.h:
 
+/home/alistair/Weed-Spotter/src/cnn/tensor.hpp:
+
+/usr/include/glib-2.0/glib/gstrvbuilder.h:
+
+/usr/include/asm-generic/types.h:
+
 /usr/include/glib-2.0/gio/gdbusobject.h:
 
 /usr/include/asm-generic/bitsperlong.h:
@@ -3364,17 +4096,17 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/allocator.h:
 
-/usr/include/glib-2.0/gio/gsettings.h:
-
-/usr/include/aarch64-linux-gnu/bits/floatn.h:
-
-/usr/include/glib-2.0/gobject/gmarshal.h:
-
 /usr/include/c++/12/bits/cpp_type_traits.h:
 
 /usr/include/c++/12/bits/codecvt.h:
 
+/usr/include/glib-2.0/glib/gtimer.h:
+
+/home/alistair/Weed-Spotter/src/cnn/cnn.hpp:
+
 /usr/include/c++/12/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/12/bits/valarray_before.h:
 
 /usr/include/glib-2.0/gio/gtcpwrapperconnection.h:
 
@@ -3388,10 +4120,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/unique_lock.h:
 
-/usr/include/glib-2.0/gio/gdbusobjectskeleton.h:
-
-/usr/include/c++/12/bits/shared_ptr.h:
-
 /usr/include/civetweb.h:
 
 /usr/include/c++/12/initializer_list:
@@ -3403,8 +4131,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/gstreamer-1.0/gst/gstpadtemplate.h:
 
 /usr/include/c++/12/compare:
-
-/usr/include/glib-2.0/glib/gtestutils.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h:
 
@@ -3436,6 +4162,8 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/cerrno:
 
+/usr/include/c++/12/cstddef:
+
 /usr/include/gstreamer-1.0/gst/gstpipeline.h:
 
 /home/alistair/Weed-Spotter/src/streamer.hpp:
@@ -3456,8 +4184,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/stl_iterator_base_funcs.h:
 
-/usr/include/glib-2.0/glib/gsequence.h:
-
 /usr/include/aarch64-linux-gnu/sys/ucontext.h:
 
 /usr/include/libcamera/libcamera/libcamera.h:
@@ -3467,6 +4193,8 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/c++/12/bits/stl_uninitialized.h:
 
 /usr/include/c++/12/bits/locale_conv.h:
+
+/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/c++/12/bits/nested_exception.h:
 
@@ -3482,8 +4210,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/exception:
 
-/usr/include/glib-2.0/glib/gversion.h:
-
 /home/alistair/Weed-Spotter/src/cameraaccess.cpp:
 
 /usr/include/glib-2.0/gio/gcancellable.h:
@@ -3495,8 +4221,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/aarch64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/glib-2.0/gobject/gclosure.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
 
@@ -3552,9 +4276,15 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/basic_ios.tcc:
 
+/usr/include/c++/12/tr1/riemann_zeta.tcc:
+
 /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-media-factory.h:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
+
+/usr/include/gstreamer-1.0/gst/gstcontrolsource.h:
+
+/usr/include/aarch64-linux-gnu/bits/math-vector.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
 
@@ -3562,7 +4292,9 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/libcamera/libcamera/stream.h:
 
-/usr/include/glib-2.0/glib/grefcount.h:
+/usr/include/gstreamer-1.0/gst/gsttypefind.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/aarch64-linux-gnu/bits/libc-header-start.h:
 
@@ -3574,11 +4306,11 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/ostream:
 
-/usr/include/glib-2.0/glib/deprecated/gcompletion.h:
-
 /usr/include/c++/12/bits/ostream.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_bf16.h:
 
 /usr/include/libcamera/libcamera/logging.h:
 
@@ -3588,9 +4320,19 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/stl_function.h:
 
+/usr/include/glib-2.0/gobject/glib-types.h:
+
+/usr/include/glib-2.0/glib/gmappedfile.h:
+
+/usr/include/glib-2.0/glib/gfileutils.h:
+
 /usr/include/glib-2.0/glib/gmem.h:
 
 /usr/include/glib-2.0/glib/gmain.h:
+
+/usr/include/glib-2.0/gobject/gtype.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/12/bits/memoryfwd.h:
 
@@ -3616,19 +4358,29 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/pstl/glue_memory_defs.h:
 
+/usr/include/gstreamer-1.0/gst/gsttracerrecord.h:
+
+/usr/include/glib-2.0/glib/gregex.h:
+
+/usr/include/dirent.h:
+
 /usr/include/c++/12/bits/stl_construct.h:
 
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h:
 
-/usr/include/gstreamer-1.0/gst/gstbuffer.h:
-
-/usr/lib/linux/uapi/arm64/asm/bitsperlong.h:
-
-/usr/include/glib-2.0/glib/gstringchunk.h:
-
 /usr/include/glib-2.0/gio/gsocketlistener.h:
 
 /usr/include/c++/12/cwchar:
+
+/usr/include/glib-2.0/gio/gdbusobjectskeleton.h:
+
+/usr/include/c++/12/bits/shared_ptr.h:
+
+/usr/include/c++/12/tr1/bessel_function.tcc:
+
+/usr/include/glib-2.0/glib/gthreadpool.h:
+
+/usr/include/glib-2.0/glib/gpoll.h:
 
 /usr/include/aarch64-linux-gnu/bits/floatn-common.h:
 
@@ -3662,6 +4414,12 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/cwctype:
 
+/usr/include/gstreamer-1.0/gst/gstcapsfeatures.h:
+
+/usr/include/c++/12/bits/vector.tcc:
+
+/usr/include/c++/12/tr1/hypergeometric.tcc:
+
 /usr/include/gstreamer-1.0/gst/base/gstbasetransform.h:
 
 /usr/include/glib-2.0/gio/gioerror.h:
@@ -3682,6 +4440,8 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
+
 /usr/include/gstreamer-1.0/gst/rtsp/rtsp-prelude.h:
 
 /home/alistair/Weed-Spotter/src/cameraaccess.hpp:
@@ -3700,6 +4460,10 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/mman-shared.h:
 
+/usr/include/glib-2.0/glib/grcbox.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/struct_sched_param.h:
+
 /usr/include/gstreamer-1.0/gst/gsttask.h:
 
 /usr/include/libcamera/libcamera/geometry.h:
@@ -3713,6 +4477,8 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/glib-2.0/glib/gstring.h:
 
 /usr/include/c++/12/pstl/glue_algorithm_defs.h:
+
+/usr/include/c++/12/bits/gslice.h:
 
 /usr/include/c++/12/regex:
 
@@ -3728,15 +4494,15 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/endian.h:
 
+/usr/include/c++/12/bits/atomic_timed_wait.h:
+
+/usr/include/c++/12/tr1/poly_hermite.tcc:
+
 /usr/include/ctype.h:
 
 /usr/include/c++/12/bits/charconv.h:
 
 /usr/include/c++/12/cstring:
-
-/usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/aarch64-linux-gnu/bits/endianness.h:
 
 /usr/include/glib-2.0/gio/gfilterinputstream.h:
 
@@ -3758,10 +4524,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/getopt_posix.h:
 
-/usr/include/alloca.h:
-
-/usr/include/c++/12/bits/exception_defines.h:
-
 /usr/include/libcamera/libcamera/base/bound_method.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/error_t.h:
@@ -3778,21 +4540,23 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/unordered_map:
 
+/usr/include/glib-2.0/glib/gmessages.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/12/bits/hashtable.h:
+
 /usr/include/c++/12/bits/hashtable_policy.h:
 
 /usr/include/gstreamer-1.0/gst/base/base-prelude.h:
 
 /home/alistair/Weed-Spotter/src/main.cpp:
 
-/usr/include/glib-2.0/glib/deprecated/gthread.h:
-
 /usr/include/gstreamer-1.0/gst/base/gstqueuearray.h:
 
 /usr/include/c++/12/bits/stl_set.h:
 
 /usr/include/c++/12/bits/unordered_map.h:
-
-/usr/include/glib-2.0/gobject/gvaluearray.h:
 
 /usr/include/c++/12/array:
 
@@ -3824,6 +4588,14 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/assert.h:
 
+/usr/include/aarch64-linux-gnu/c++/12/bits/opt_random.h:
+
+/usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/aarch64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/12/span:
+
 /usr/include/gstreamer-1.0/gst/base/gstdataqueue.h:
 
 /usr/include/glib-2.0/gio/gnetworkaddress.h:
@@ -3844,17 +4616,19 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/libcamera/libcamera/base/span.h:
 
-/usr/include/glib-2.0/glib/gtrashstack.h:
-
 /usr/include/c++/12/limits:
 
 /usr/include/c++/12/algorithm:
+
+/usr/include/c++/12/bits/random.tcc:
 
 /usr/include/glib-2.0/gio/gnetworkmonitor.h:
 
 /usr/include/c++/12/bits/ranges_algo.h:
 
 /usr/include/c++/12/bits/ranges_util.h:
+
+/home/alistair/Weed-Spotter/src/globals.hpp:
 
 /usr/include/libcamera/libcamera/orientation.h:
 
@@ -3866,23 +4640,11 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/libcamera/libcamera/request.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/glib-2.0/gobject/gtype.h:
-
 /usr/include/libcamera/libcamera/fence.h:
-
-/usr/include/gstreamer-1.0/gst/gsttracerrecord.h:
-
-/usr/include/dirent.h:
-
-/usr/include/glib-2.0/glib/gregex.h:
 
 /usr/include/c++/12/backward/binders.h:
 
 /usr/include/libcamera/libcamera/color_space.h:
-
-/usr/include/glib-2.0/glib-object.h:
 
 /usr/include/glib-2.0/gio/gtask.h:
 
@@ -3893,12 +4655,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/glib-2.0/gio/giostream.h:
 
 /usr/include/libcamera/libcamera/transform.h:
-
-/usr/include/c++/12/fstream:
-
-/usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h:
-
-/usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h:
 
 /usr/include/glib-2.0/gio/gdtlsconnection.h:
 
@@ -3914,15 +4670,23 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/ratio:
 
-/usr/include/glib-2.0/glib/gmarkup.h:
-
 /usr/include/aarch64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/12/ctime:
 
+/usr/include/glib-2.0/gobject/gtypeplugin.h:
+
+/usr/include/aarch64-linux-gnu/bits/fcntl-linux.h:
+
+/usr/include/c++/12/bits/forward_list.tcc:
+
+/usr/include/c++/12/any:
+
 /usr/include/c++/12/bits/parse_numbers.h:
 
 /usr/include/c++/12/stop_token:
+
+/usr/include/c++/12/cmath:
 
 /usr/include/glib-2.0/glib/genviron.h:
 
@@ -3936,11 +4700,7 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/semaphore:
 
-/usr/include/c++/12/bits/semaphore_base.h:
-
 /usr/include/c++/12/bits/this_thread_sleep.h:
-
-/usr/include/glib-2.0/glib/deprecated/gcache.h:
 
 /usr/include/c++/12/iosfwd:
 
@@ -3948,17 +4708,25 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/atomic_futex.h:
 
-/usr/include/c++/12/bits/uses_allocator_args.h:
+/home/alistair/Weed-Spotter/src/cameraimage.hpp:
 
-/usr/include/aarch64-linux-gnu/bits/timex.h:
+/usr/include/c++/12/numeric:
 
-/usr/include/glib-2.0/glib/gqsort.h:
+/usr/include/c++/12/fstream:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h:
+
+/usr/include/c++/12/tr1/ell_integral.tcc:
 
 /usr/include/libcamera/libcamera/framebuffer.h:
 
 /usr/include/aarch64-linux-gnu/sys/mman.h:
 
 /usr/include/glib-2.0/gio/gmemorymonitor.h:
+
+/usr/include/c++/12/bits/mask_array.h:
 
 /usr/include/libcamera/libcamera/camera_manager.h:
 
@@ -3988,7 +4756,9 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/struct_stat.h:
 
-/home/alistair/Weed-Spotter/src/cameraimage.hpp:
+/home/alistair/Weed-Spotter/src/cameraimage.cpp:
+
+/usr/include/glib-2.0/glib/gnode.h:
 
 /usr/include/jpeglib.h:
 
@@ -4002,9 +4772,161 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/jmorecfg.h:
 
-/home/alistair/Weed-Spotter/src/cameraimage.cpp:
+/home/alistair/Weed-Spotter/src/cnn/cnn.cpp:
 
-/usr/include/glib-2.0/glib/gnode.h:
+/usr/include/c++/12/stdlib.h:
+
+/usr/include/string.h:
+
+/home/alistair/Weed-Spotter/src/cnn/cnnutils.hpp:
+
+/usr/include/math.h:
+
+/usr/include/gstreamer-1.0/gst/base/gstbitreader.h:
+
+/usr/include/glib-2.0/gio/gtlsinteraction.h:
+
+/usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/glib-2.0/gio/gsettings.h:
+
+/usr/include/aarch64-linux-gnu/bits/floatn.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/aarch64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/c++/12/bits/ranges_algobase.h:
+
+/usr/include/c++/12/bits/specfun.h:
+
+/usr/include/c++/12/tr1/gamma.tcc:
+
+/usr/include/glib-2.0/gobject/gbinding.h:
+
+/usr/include/gstreamer-1.0/gst/glib-compat.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/c++/12/ext/alloc_traits.h:
+
+/usr/include/c++/12/tr1/special_function_util.h:
+
+/usr/include/glib-2.0/gobject/gobject.h:
+
+/usr/include/glib-2.0/glib/ggettext.h:
+
+/usr/include/glib-2.0/glib/gslist.h:
+
+/usr/include/c++/12/tr1/beta_function.tcc:
+
+/usr/include/glib-2.0/gio/gdbusnamewatching.h:
+
+/usr/include/c++/12/bits/chrono.h:
+
+/usr/include/c++/12/tr1/exp_integral.tcc:
+
+/usr/include/c++/12/tr1/poly_laguerre.tcc:
+
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_neon.h:
+
+/usr/lib/gcc/aarch64-linux-gnu/12/include/arm_fp16.h:
+
+/usr/include/c++/12/bits/predefined_ops.h:
+
+/home/alistair/Weed-Spotter/src/cnn/cnnutils.cpp:
+
+/usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-address-pool.h:
+
+/usr/include/c++/12/bits/forward_list.h:
+
+/usr/include/c++/12/valarray:
+
+/usr/include/c++/12/bits/slice_array.h:
+
+/usr/include/gstreamer-1.0/gst/gstdeviceprovider.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/aarch64-linux-gnu/bits/procfs-prregset.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/12/bits/exception_defines.h:
+
+/usr/include/c++/12/bits/indirect_array.h:
+
+/usr/include/c++/12/bits/semaphore_base.h:
+
+/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/12/version:
+
+/usr/include/c++/12/cassert:
+
+/usr/include/glib-2.0/gobject/glib-enumtypes.h:
+
+/usr/include/c++/12/bits/regex_error.h:
+
+/usr/include/c++/12/tr1/legendre_function.tcc:
+
+/usr/include/aarch64-linux-gnu/bits/signum-arch.h:
+
+/usr/include/glib-2.0/gio/gdbusmethodinvocation.h:
+
+/usr/include/c++/12/locale:
+
+/usr/include/aarch64-linux-gnu/sys/time.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h:
+
+/usr/lib/gcc/aarch64-linux-gnu/12/include/syslimits.h:
+
+/usr/lib/linux/uapi/arm64/asm/errno.h:
+
+/usr/include/c++/12/climits:
+
+/usr/include/c++/12/bits/valarray_after.h:
+
+/usr/include/glib-2.0/glib/gconvert.h:
+
+/usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h:
+
+/usr/include/gstreamer-1.0/gst/gsttaglist.h:
+
+/usr/include/c++/12/bits/exception.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h:
+
+/usr/include/libintl.h:
+
+/usr/include/c++/12/bits/sstream.tcc:
+
+/usr/include/glib-2.0/glib/ghook.h:
+
+/usr/include/aarch64-linux-gnu/bits/mman-linux.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h:
+
+/usr/include/glib-2.0/glib-object.h:
+
+/usr/include/c++/12/ranges:
+
+/usr/include/c++/12/bits/stl_numeric.h:
+
+/usr/include/c++/12/pstl/glue_numeric_defs.h:
+
+/usr/include/glib-2.0/gio/gconverter.h:
+
+/usr/include/c++/12/random:
+
+/usr/include/c++/12/bits/random.h:
 
 /usr/include/gstreamer-1.0/gst/gstelementmetadata.h:
 
@@ -4038,8 +4960,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/sigaction.h:
 
-/usr/include/glib-2.0/glib/gprimes.h:
-
 /usr/include/aarch64-linux-gnu/bits/sigcontext.h:
 
 /usr/lib/linux/uapi/arm64/asm/sigcontext.h:
@@ -4050,7 +4970,11 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/lib/linux/uapi/arm64/asm/posix_types.h:
 
-/usr/include/glib-2.0/glib/gvarianttype.h:
+/usr/include/glib-2.0/gio/gunixfdlist.h:
+
+/usr/include/glib-2.0/glib/deprecated/gmain.h:
+
+/usr/include/glib-2.0/glib/gbase64.h:
 
 /usr/include/glib-2.0/gio/gdbusintrospection.h:
 
@@ -4064,19 +4988,9 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/procfs.h:
 
+/home/alistair/Weed-Spotter/lib/json.hpp:
+
 /usr/include/aarch64-linux-gnu/bits/procfs-id.h:
-
-/usr/include/gstreamer-1.0/gst/gstdeviceprovider.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/aarch64-linux-gnu/bits/procfs-prregset.h:
-
-/usr/include/glib-2.0/gobject/glib-types.h:
-
-/usr/include/glib-2.0/glib/gfileutils.h:
-
-/usr/include/glib-2.0/glib/gmappedfile.h:
 
 /usr/include/aarch64-linux-gnu/bits/sigstksz.h:
 
@@ -4086,23 +5000,9 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/ss_flags.h:
 
-/usr/include/glib-2.0/glib/gqueue.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/glib-2.0/glib/ghook.h:
-
-/usr/include/aarch64-linux-gnu/bits/mman-linux.h:
-
-/usr/include/c++/12/bits/locale_facets_nonio.tcc:
-
 /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-media.h:
 
 /usr/include/c++/12/bits/regex.h:
-
-/usr/include/glib-2.0/gobject/gtypemodule.h:
-
-/usr/include/string.h:
 
 /usr/include/glib-2.0/gio/gemblemedicon.h:
 
@@ -4111,34 +5011,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/glib-2.0/gio/gfilemonitor.h:
 
 /usr/include/glib-2.0/glib/gdir.h:
-
-/usr/include/glib-2.0/gio/gdbusmethodinvocation.h:
-
-/usr/include/c++/12/locale:
-
-/usr/include/aarch64-linux-gnu/sys/time.h:
-
-/usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h:
-
-/usr/lib/gcc/aarch64-linux-gnu/12/include/syslimits.h:
-
-/usr/lib/linux/uapi/arm64/asm/errno.h:
-
-/usr/include/c++/12/climits:
-
-/usr/include/glib-2.0/glib/gconvert.h:
-
-/usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h:
-
-/usr/include/gstreamer-1.0/gst/gsttaglist.h:
-
-/usr/include/c++/12/bits/exception.h:
-
-/usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/12/bits/sstream.tcc:
 
 /usr/include/glib-2.0/glib/gquark.h:
 
@@ -4156,15 +5028,7 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/c++/12/bits/regex_automaton.tcc:
 
-/usr/include/glib-2.0/gio/ginputstream.h:
-
-/usr/include/glib-2.0/glib/deprecated/grel.h:
-
 /usr/include/c++/12/bits/regex_scanner.h:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/glib-2.0/glib/gstrvbuilder.h:
 
 /usr/include/c++/12/bits/regex_scanner.tcc:
 
@@ -4192,8 +5056,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/glib-2.0/glib/gerror.h:
 
-/usr/include/c++/12/stdlib.h:
-
 /usr/include/c++/12/bits/ranges_base.h:
 
 /usr/include/glib-2.0/glib/gbacktrace.h:
@@ -4203,8 +5065,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/libcamera/libcamera/version.h:
 
 /usr/include/glib-2.0/glib/gbitlock.h:
-
-/usr/include/glib-2.0/glib/goption.h:
 
 /usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-params.h:
 
@@ -4226,12 +5086,6 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 
 /usr/include/aarch64-linux-gnu/bits/dirent.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/glib-2.0/glib/grcbox.h:
-
-/usr/include/glib-2.0/glib/gslist.h:
-
 /usr/include/glib-2.0/glib/glist.h:
 
 /usr/include/glib-2.0/glib/ghmac.h:
@@ -4243,79 +5097,3 @@ CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o: /home/alistair/Weed-Spotter/src/
 /usr/include/glib-2.0/glib/giochannel.h:
 
 /usr/include/glib-2.0/glib/gkeyfile.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/c++/12/bits/hashtable.h:
-
-/usr/include/glib-2.0/glib/gmessages.h:
-
-/usr/include/glib-2.0/gio/gfilenamecompleter.h:
-
-/usr/include/glib-2.0/glib/gvariant.h:
-
-/usr/include/glib-2.0/glib/grand.h:
-
-/usr/include/glib-2.0/glib/gscanner.h:
-
-/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
-
-/usr/include/glib-2.0/glib/gslice.h:
-
-/usr/include/glib-2.0/glib/gpoll.h:
-
-/usr/include/glib-2.0/glib/gthreadpool.h:
-
-/usr/include/glib-2.0/glib/gtimer.h:
-
-/usr/include/glib-2.0/glib/gtree.h:
-
-/usr/include/glib-2.0/gio/gunixfdlist.h:
-
-/usr/include/glib-2.0/glib/gbase64.h:
-
-/usr/include/glib-2.0/glib/deprecated/gmain.h:
-
-/usr/include/glib-2.0/glib/glib-autocleanups.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/c++/12/ext/alloc_traits.h:
-
-/usr/include/gstreamer-1.0/gst/glib-compat.h:
-
-/usr/include/glib-2.0/gobject/gbinding.h:
-
-/usr/include/glib-2.0/glib/ggettext.h:
-
-/usr/include/glib-2.0/gobject/gobject.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/glib-2.0/gobject/gparam.h:
-
-/usr/include/glib-2.0/gobject/gsignal.h:
-
-/usr/include/glib-2.0/gobject/gboxed.h:
-
-/usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-server-prelude.h:
-
-/usr/include/glib-2.0/gobject/gbindinggroup.h:
-
-/usr/include/glib-2.0/gobject/genums.h:
-
-/usr/include/c++/12/bits/regex_error.h:
-
-/usr/include/aarch64-linux-gnu/bits/signum-arch.h:
-
-/usr/include/glib-2.0/gobject/glib-enumtypes.h:
-
-/usr/include/glib-2.0/gio/gdbusserver.h:
-
-/usr/include/glib-2.0/gobject/gparamspecs.h:
-
-/usr/include/glib-2.0/gobject/gsignalgroup.h:
-
-/usr/include/aarch64-linux-gnu/bits/fcntl-linux.h:
-
-/usr/include/glib-2.0/gobject/gtypeplugin.h:

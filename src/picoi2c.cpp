@@ -1,4 +1,9 @@
 #include "picoi2c.hpp"
+#include <iostream>
+#include <pigpio.h>
+#include <unistd.h>
+#include <cstring>
+
 
 void picoI2cListenBlocking(void){
 	if(gpioInitialise() < 0){

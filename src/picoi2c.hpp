@@ -1,11 +1,6 @@
 #ifndef PICOI2C_HPP
 #define PICOI2C_HPP
 
-#include <iostream>
-#include <pigpio.h>
-#include <unistd.h>
-#include <cstring>
-
 //Names match the code on the Pico
 //7 bit address
 #define ZERO_I2C_ADDR 0x2A

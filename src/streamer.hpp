@@ -3,10 +3,6 @@
 
 #include <gst/gst.h>
 #include <gst/rtsp-server/rtsp-server.h>
-#include <iostream>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 
 class Streamer{
 	public:

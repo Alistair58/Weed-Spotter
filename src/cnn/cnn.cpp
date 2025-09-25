@@ -1,7 +1,5 @@
 #include "cnn.hpp"
-#if PROFILING
-    #include "timer.hpp"
-#endif
+#include <arm_neon.h>
 
 //----------------------------------------------------
 //CONSTRUCTORS 
@@ -39,11 +37,10 @@ CNN::CNN(d2& pixelStatsInp){
     strides[3] = {2,2};
     strides[4] = {2,2};
     padding = true;
-    this->dropoutProb = dropoutProbability;
 
     this->pixelStats = pixelStatsInp;
-    this->kernels = loadKernels(restart);
-    this->weights = loadWeights(restart);
+    this->kernels = loadKernels();
+    this->weights = loadWeights();
     this->activations = std::vector<Tensor>(numNeurons.size());
     for(int l=0;l<numNeurons.size();l++){
         activations[l] = Tensor({numNeurons[l]});
@@ -78,7 +75,7 @@ CNN::CNN(d2& pixelStatsInp){
 }
 
 //Creating a copy from a template CNN (I can't call it template)
-CNN::CNN(CNN *original) {
+CNN::CNN(CNN *original,bool deepCopyWeights) {
     numNeurons = original->numNeurons;
     mapDimens = original->mapDimens;
     kernelSizes = original->kernelSizes;
@@ -90,12 +87,6 @@ CNN::CNN(CNN *original) {
         weights = original->weights;
     }
     else{ //i.e. shallow copy
-        if(original->kernels.size()!=original->kernelsGrad.size()){
-            throw std::invalid_argument("kernels and kernelsGrad must have the same number of layers");
-        }
-        if(original->weights.size()!=original->weightsGrad.size()){
-            throw std::invalid_argument("weights and weightsGrad must have the same number of layers");
-        }
         this->kernels = std::vector<Tensor>(original->kernels.size());
         for(int i=0;i<original->kernels.size();i++){
             this->kernels[i].shallowCopy(original->kernels[i]);
@@ -143,7 +134,7 @@ CNN::CNN(CNN *original) {
 //KEY METHODS 
 
 
-std::vector<float> CNN::forwards(Tensor& imageInt,bool training
+std::vector<float> CNN::forwards(Tensor& imageInt
 #if PROFILING
     ,Timer *parentTimer
 #endif
@@ -157,7 +148,7 @@ std::vector<float> CNN::forwards(Tensor& imageInt,bool training
         ,parentTimer?forwardsTimer:nullptr
     #endif
     );
-    normaliseImg(maps[0],d->getPixelMeans(),d->getPixelStdDevs()
+    normaliseImg(maps[0]
     #if PROFILING
         ,parentTimer?forwardsTimer:nullptr
     #endif
@@ -261,9 +252,6 @@ std::vector<float> CNN::forwards(Tensor& imageInt,bool training
                 float32x4_t prevActivations128 = vld1q_f32(&prevActivations[j]);
                 float32x4_t currWeights128 = vld1q_f32(&currWeightsTo[j]);
                 currActivations[i] += dotProduct4f(prevActivations128,currWeights128);
-                // __m256 prevActivationsM256 = _mm256_loadu_ps(&prevActivations[j]);
-                // __m256 currWeightsM256 = _mm256_loadu_ps(&currWeightsTo[j]);
-                // currActivations[i] += dotProduct8f(prevActivationsM256,currWeightsM256);
             }
             //scalar tail
             for(;j<numNeurons[l];j++){

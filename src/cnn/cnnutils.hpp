@@ -2,7 +2,6 @@
 #define CNNUTILS_HPP
 
 #include <iostream>
-#include <fstream>
 #include <vector>
 #include <cmath>
 #include <cstdlib>
@@ -10,10 +9,6 @@
 #include <numbers>
 #include "globals.hpp"
 #include "tensor.hpp"
-#include <algorithm>
-#include <random>
-#include <immintrin.h>
-#include "json.hpp"
 #include <arm_neon.h>
 
 #if PROFILING
@@ -46,14 +41,14 @@ class CnnUtils {
 
         //UTILS
         void reset();
-        std::vector<Tensor> loadKernels(bool loadNew
+        std::vector<Tensor> loadKernels(
         #if PROFILING
-            ,Timer *parentTimer = nullptr
+            Timer *parentTimer = nullptr
         #endif 
         );
-        std::vector<Tensor> loadWeights(bool loadNew
+        std::vector<Tensor> loadWeights(
         #if PROFILING
-            ,Timer *parentTimer = nullptr
+            Timer *parentTimer = nullptr
         #endif 
         );
 
@@ -64,7 +59,7 @@ class CnnUtils {
             ,Timer *parentTimer = nullptr
         #endif
         ) const;
-        static void normaliseImg(Tensor& img,std::vector<float> pixelMeans,std::vector<float> pixelStdDevs
+        static void normaliseImg(Tensor& img
         #if PROFILING
             ,Timer *parentTimer = nullptr
         #endif 
@@ -120,8 +115,8 @@ class CnnUtils {
 };
 
 inline float CnnUtils::dotProduct4f(float *X,float *Y){
-    float32x4_t a = vld1_f32(X);       // Load 4 floats
-    float32x4_t b = vld1_f32(Y);       // Load 4 floats
+    float32x4_t a = vld1q_f32(X);       // Load 4 floats
+    float32x4_t b = vld1q_f32(Y);       // Load 4 floats
     return dotProduct4f(a,b);
 }
 
@@ -131,8 +126,8 @@ inline float CnnUtils::dotProduct4f(float32x4_t a,float32x4_t b){
     return horizontalSum(prod);
 }
 
-inline float CnnUtils::horizontalSum(__m256 a){
-    return vaddvq_f32(a); 
+inline float CnnUtils::horizontalSum(float32x4_t a){
+    return vaddvq_f32(a);
 }
 
 

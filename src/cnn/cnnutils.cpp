@@ -1,5 +1,9 @@
 #include "cnnutils.hpp"
 #include "cnn.hpp" //Needs to be in the .cpp file to avoid a circular dependency but we still need member functions
+#include "json.hpp"
+#include <random>
+#include <algorithm>
+#include <fstream>
 
 //----------------------------------------------------
 //IMAGE-RELATED
@@ -77,7 +81,7 @@ void CnnUtils::normaliseImg(Tensor& img
         if(parentTimer) normaliseImgTimer = parentTimer->addChildTimer("normaliseImg");
     #endif 
     d1 pixelMeans = this->pixelStats[0];
-    d1 pixelStdDevs = this->pixleStats[1];
+    d1 pixelStdDevs = this->pixelStats[1];
     std::vector<int> imgDimens = img.getDimens();
     if(imgDimens.size()!=3){
         throw std::invalid_argument("Image must have 3 dimensions for normaliseImg");
@@ -906,37 +910,15 @@ void CnnUtils::reset(){
     }
 }
 
-std::vector<Tensor> CnnUtils::loadKernels(bool loadNew
+std::vector<Tensor> CnnUtils::loadKernels(
 #if PROFILING
-    ,Timer *parentTimer
+    Timer *parentTimer
 #endif 
 ){
-    #if PROFILING
-        Timer *loadKernelsTimer = nullptr;
-        if(parentTimer) loadKernelsTimer = parentTimer->addChildTimer("loadKernels");
-    #endif
-    if(loadNew){
-        std::vector<Tensor> result(mapDimens.size()-1);
-        for(int l=0;l<(mapDimens.size()-1);l++){
-            if(kernelSizes[l].first==0 || kernelSizes[l].second==0){
-                result[l] = Tensor({0,0,0,0});
-            }
-            else{
-                result[l] = Tensor({mapDimens[l+1].c,mapDimens[l].c,kernelSizes[l].first,kernelSizes[l].second});
-                Tensor biases = Tensor({mapDimens[l+1].c});
-                //only 1 bias for each new map
-                result[l].setBiases(biases);
-            }
-        }
-        #if PROFILING
-            if(parentTimer) loadKernelsTimer->stop("(loadNew)");
-        #endif
-        #if DEBUG
-            std::cout << "Loaded kernels" << std::endl;
-        #endif
-        return result;
-    }
-    else{
+   	 #if PROFILING
+        	Timer *loadKernelsTimer = nullptr;
+        	if(parentTimer) loadKernelsTimer = parentTimer->addChildTimer("loadKernels");
+   	#endif
         std::ifstream kernelsFile(currDir+"/res/kernelWeights.json");
         nlohmann::json jsonKernels;
         kernelsFile >> jsonKernels;
@@ -991,33 +973,16 @@ std::vector<Tensor> CnnUtils::loadKernels(bool loadNew
     }
 }
 
-std::vector<Tensor> CnnUtils::loadWeights(bool loadNew
+std::vector<Tensor> CnnUtils::loadWeights(
 #if PROFILING
-    ,Timer *parentTimer
+    Timer *parentTimer
 #endif 
 ){
-    //Each layer of weights is a tensor
-    #if PROFILING
-        Timer *loadWeightsTimer = nullptr;
-        if(parentTimer) loadWeightsTimer = parentTimer->addChildTimer("loadWeights");
-    #endif
-    if(loadNew){
-        std::vector<Tensor> result((int)numNeurons.size()-1);
-        for(int l=0;l<numNeurons.size()-1;l++){
-            Tensor layer({numNeurons[l+1],numNeurons[l]});
-            Tensor biases = Tensor({numNeurons[l+1]});
-            layer.setBiases(biases);
-            result[l] = layer;
-        }
-        #if PROFILING
-            if(parentTimer) loadWeightsTimer->stop("(loadNew)");
-        #endif
-        #if DEBUG
-            std::cout << "Loaded weights" << std::endl;
-        #endif
-        return result;
-    }
-    else{
+    	//Each layer of weights is a tensor
+   	 #if PROFILING
+  		Timer *loadWeightsTimer = nullptr;
+        	if(parentTimer) loadWeightsTimer = parentTimer->addChildTimer("loadWeights");
+    	#endif
         std::ifstream weightsFile(currDir+"/res/mlpWeights.json");
         nlohmann::json jsonWeights;
         weightsFile >> jsonWeights;
@@ -1059,322 +1024,5 @@ std::vector<Tensor> CnnUtils::loadWeights(bool loadNew
             std::cout << "Loaded weights" << std::endl;
         #endif
         return result;
-    }
-}
-       
-void CnnUtils::applyGradients(int batchSize
-#if PROFILING
-    ,Timer *parentTimer
-#endif 
-){ //(and reset gradients)
-    #if PROFILING
-        Timer *applyGradientsSingleTimer = nullptr;
-        if(parentTimer) applyGradientsSingleTimer = parentTimer->addChildTimer("applyGradientsSingle");
-    #endif
-    applyGradient(kernels,kernelsGrad,batchSize);
-    applyGradient(weights,weightsGrad,batchSize);
-    #if PROFILING
-        if(parentTimer) applyGradientsSingleTimer->stop();
-    #endif
 }
 
-void CnnUtils::applyGradients(std::vector<CNN*>& cnns,int batchSize
-#if PROFILING
-    ,Timer *parentTimer
-#endif 
-){ //(and reset gradients)
-    #if PROFILING
-        Timer *applyGradientsMultipleTimer = nullptr;
-        if(parentTimer) applyGradientsMultipleTimer = parentTimer->addChildTimer("applyGradientsMultiple");
-    #endif
-    //this cnn must be included in cnns
-    for(int n=0;n<cnns.size();n++){
-        applyGradient(kernels,(cnns[n]->kernelsGrad),batchSize);
-        applyGradient(weights,(cnns[n]->weightsGrad),batchSize);
-    }
-    #if PROFILING
-        if(parentTimer) applyGradientsMultipleTimer->stop();
-    #endif
-}
-
-void CnnUtils::applyGradient(std::vector<Tensor>& values, std::vector<Tensor>& gradient,int batchSize){ //Main values and biases
-    const float maxGrad = 1;
-    //we could do weights -= sum(gradients[i]/batchSize) * LR
-    // or just weights -= sum(gradients[i]) * averagedLR
-    const float averagedLR = this->LR / batchSize;
-    if(values.size()!=gradient.size()){
-        throw std::invalid_argument("Values and gradient must have the same number of layers for the gradient to be applied");
-    }
-    for(int l=0;l<values.size();l++){
-        std::vector<int> valuesDimens = values[l].getDimens();
-        std::vector<int> gradientDimens = gradient[l].getDimens();
-        if(values[l].getTotalSize()!=gradient[l].getTotalSize() || valuesDimens.size()!=gradientDimens.size()){
-            throw std::invalid_argument("Tensors must have the dimensions for the gradient to be applied");
-        }
-        for(int i=0;i<valuesDimens.size();i++){
-            if(valuesDimens[i]!=gradientDimens[i]){
-                throw std::invalid_argument("Tensors must have the dimensions for the gradient to be applied");
-            }
-        }
-        float*  __restrict__ gradData = gradient[l].getData();
-        float*  __restrict__ valuesData = values[l].getData();
-        for(int i=0;i<values[l].getTotalSize();i++){
-            float gradVal = gradData[i];
-            if(!(floatCmp(gradVal,0.0f))){
-                if(std::isnan(gradVal)){
-                    std::cout << "NaN gradient i: "+std::to_string(i) << std::endl;
-                    gradData[i] = 0;
-                    continue;
-                }
-                float adjustedGrad = gradVal * averagedLR;
-                if(abs(adjustedGrad)>maxGrad){
-                    std::cout << "Very large gradient: "+std::to_string(adjustedGrad) << std::endl;
-                    adjustedGrad = (adjustedGrad>0)?maxGrad:-maxGrad;
-                }
-                valuesData[i] -= adjustedGrad; 
-                gradData[i] = 0;
-            }   
-        }
-    }
-    std::vector<Tensor> valuesBiases;
-    std::vector<Tensor> gradientBiases;
-    for(int l=0;l<values.size();l++){
-        Tensor *valLayerBiases = values[l].getBiases();
-        Tensor *gradLayerBiases = gradient[l].getBiases();
-        if((valLayerBiases==nullptr) != (gradLayerBiases==nullptr)){
-            throw std::invalid_argument("Biases must have the same dimensions for the gradient to be applied");
-        }
-        if(valLayerBiases!=nullptr && gradLayerBiases!=nullptr){
-            size_t valBiasesSize = valLayerBiases->getTotalSize();
-            size_t gradBiasesSize = gradLayerBiases->getTotalSize();
-            std::vector<int> valBiasesDimens = valLayerBiases->getDimens();
-            std::vector<int> gradBiasesDimens = gradLayerBiases->getDimens();
-            if(valBiasesSize!=gradBiasesSize || valBiasesDimens.size()!=gradBiasesDimens.size()){
-                throw std::invalid_argument("Biases must have the dimensions for the gradient to be applied");
-            }
-            for(int i=0;i<valBiasesDimens.size();i++){
-                if(valBiasesDimens[i]!=gradBiasesDimens[i]){
-                    throw std::invalid_argument("Biases must have the dimensions for the gradient to be applied");
-                }
-            }
-            //I don't think that there ever is an offset but you could provide an input with an offset (i.e. biases is a sub-tensor)
-            float* __restrict__ gradBiasesData = gradLayerBiases->getData();
-            float* __restrict__ valBiasesData = valLayerBiases->getData();
-            for(int i=0;i<valBiasesSize;i++){
-                float gradVal = gradBiasesData[i];
-                if(!(floatCmp(gradVal,0.0f))){
-                    if(std::isnan(gradVal)){
-                        std::cout << "NaN bias gradient i: "+std::to_string(i) << std::endl;
-                        gradBiasesData[i] = 0;
-                        continue;
-                    }
-                    float adjustedGrad = gradVal * averagedLR;
-                    if(abs(adjustedGrad)>maxGrad){
-                        std::cout << "Very large bias gradient: "+std::to_string(adjustedGrad) << std::endl;
-                        adjustedGrad = (adjustedGrad>0)?maxGrad:-maxGrad;
-                    }
-                    valBiasesData[i] -= adjustedGrad; 
-                    gradBiasesData[i] = 0;
-                }   
-            }
-        }
-    }
-}
-
-void CnnUtils::resetKernels(
-#if PROFILING
-    Timer *parentTimer
-#endif 
-){
-    #if PROFILING
-        Timer *resetKernelsTimer = nullptr;
-        if(parentTimer) resetKernelsTimer = parentTimer->addChildTimer("resetKernels");
-    #endif
-    std::random_device rd{}; //Non-deterministic seeder
-    std::mt19937 gen{rd()}; //Mersenne twister 
-    for(int l=0;l<kernels.size();l++){ //layer
-        float *kernelsData = kernels[l].getData();
-        std::vector<int> kernelsDimens = kernels[l].getDimens();
-        std::vector<int> kernelsChildDimens = kernels[l].getChildSizes();
-        for(int i=0;i<kernelsDimens[0];i++){ //current channel
-            //num kernels for that layer * h * w
-            int kernelsToChannel = i*kernelsChildDimens[0];
-            int numElems = kernelsDimens[1]*kernelsDimens[2]*kernelsDimens[3]; 
-            //He initialisation
-            float stdDev = (float) sqrt(2.0f/numElems);
-            std::normal_distribution<float> dist(0,stdDev);
-            for(int j=0;j<kernelsDimens[1];j++){ //previous channel
-                int kernelsFromChannel = kernelsToChannel + j*kernelsChildDimens[1];
-                for(int y=0;y<kernelsDimens[2];y++){
-                    int kernelsRow = kernelsFromChannel + y*kernelsChildDimens[2];
-                    for(int x=0;x<kernelsDimens[3];x++){
-                        kernelsData[kernelsRow+x] = dist(gen); 
-                    }
-                }
-            }
-        }
-        //set the biases = 0
-        Tensor *biases = kernels[l].getBiases();
-        size_t biasesSize = biases->getTotalSize();
-        float *biasesData = biases->getData();
-        memset(biasesData,0,biasesSize*sizeof(float));
-    }
-    
-    saveKernels(
-    #if PROFILING
-        parentTimer?resetKernelsTimer:nullptr
-    #endif
-    );
-    #if PROFILING
-        if(parentTimer) resetKernelsTimer->stop();
-    #endif
-    
-}
-
-void CnnUtils::resetWeights(
-#if PROFILING
-    Timer *parentTimer
-#endif 
-) {
-    #if PROFILING
-        Timer *resetWeightsTimer = nullptr;
-        if(parentTimer) resetWeightsTimer = parentTimer->addChildTimer("resetWeights");
-    #endif
-    std::random_device rd{}; //Non-deterministic seeder
-    std::mt19937 gen{rd()}; //Mersenne twister 
-    for(int l=0;l<weights.size();l++){ //layer
-        float *weightsData = weights[l].getData();
-        std::vector<int> weightsChildSizes = weights[l].getChildSizes();
-        std::vector<int> weightsDimens = weights[l].getDimens();
-        for (int i=0;i<weightsDimens[0];i++) { //neurone
-            int weightsTo = i*weightsChildSizes[0];
-            //He initialisation
-            float stdDev = (float) sqrt(2.0f/weightsDimens[1]);
-            std::normal_distribution<float> dist(0,stdDev);
-            for (int j=0;j<weightsDimens[1];j++) { //previous neurone
-                weightsData[weightsTo+j] = dist(gen); 
-            }
-        }
-        //set the biases = 0
-        Tensor *biases = weights[l].getBiases();
-        size_t biasesSize = biases->getTotalSize();
-        float *biasesData = biases->getData();
-        memset(biasesData,0,biasesSize*sizeof(float));
-    }
-    saveWeights(
-    #if PROFILING
-       parentTimer?resetWeightsTimer:nullptr
-    #endif
-    );
-    #if PROFILING
-        if(parentTimer) resetWeightsTimer->stop();
-    #endif
-    
-}
-
-
-
-void CnnUtils::CnnUtils::saveWeights(
-#if PROFILING
-    Timer *parentTimer
-#endif 
-) {
-    #if PROFILING
-        Timer *saveWeightsTimer = nullptr;
-        if(parentTimer) saveWeightsTimer = parentTimer->addChildTimer("saveWeights");
-    #endif
-    d3 weightsVec(weights.size());
-    d2 biasesVec(weights.size());
-    for(int l=0;l<weights.size();l++){
-        weightsVec[l] = weights[l].toVector<d2>();
-        biasesVec[l] = weights[l].getBiases()->toVector<d1>();
-    }
-    
-    std::ofstream weightsFile(currDir+"/res/mlpWeights.json");
-    nlohmann::json jsonWeights = weightsVec;
-    weightsFile << jsonWeights.dump();
-    weightsFile.close();
-
-    std::ofstream biasesFile(currDir+"/res/mlpBiases.json");
-    nlohmann::json jsonBiases = biasesVec;
-    biasesFile << jsonBiases.dump();
-    biasesFile.close();
-    #if PROFILING
-        if(parentTimer) saveWeightsTimer->stop();
-    #endif
-}
-
-void CnnUtils::saveKernels(
-#if PROFILING
-    Timer *parentTimer
-#endif    
-) {
-    #if PROFILING
-        Timer *saveKernelsTimer = nullptr;
-        if(parentTimer) saveKernelsTimer = parentTimer->addChildTimer("saveKernels");
-    #endif
-    d5 kernelsVec(kernels.size());
-    d2 biasesVec(kernels.size());
-    for(int l=0;l<kernels.size();l++){
-        kernelsVec[l] = kernels[l].toVector<d4>();
-        biasesVec[l] = kernels[l].getBiases()->toVector<d1>();
-    };
-
-    std::ofstream kernelsFile(currDir+"/res/kernelWeights.json");
-    nlohmann::json jsonKernels = kernelsVec;
-    kernelsFile << jsonKernels.dump();    
-    kernelsFile.close();
-
-    std::ofstream biasesFile(currDir+"/res/kernelBiases.json");
-    nlohmann::json jsonBiases = biasesVec;
-    biasesFile << jsonBiases.dump();
-    biasesFile.close();
-
-    #if PROFILING
-        if(parentTimer) saveKernelsTimer->stop();
-    #endif
-}
-
-void CnnUtils::saveActivations(){  //For debugging use
-    d2 activationsVec(activations.size());
-    for(int l=0;l<activations.size();l++){
-        activationsVec[l] = activations[l].toVector<d1>();
-    }
-    std::ofstream activationsFile(currDir+"/res/activations.json");
-    nlohmann::json jsonActivations = activationsVec;
-    activationsFile << jsonActivations.dump();
-    activationsFile.close();
-}
-
-void CnnUtils::saveMaps(){  //For debugging use
-    d4 mapsVec(maps.size());
-    for(int l=0;l<maps.size();l++){
-        mapsVec[l] = maps[l].toVector<d3>();
-    }
-    std::ofstream mapsFile(currDir+"/res/maps.json");
-    nlohmann::json jsonMaps = mapsVec;
-    mapsFile << jsonMaps.dump();
-    mapsFile.close();
-}
-
-void CnnUtils::resetGrad(std::vector<Tensor>& grad){
-    for(Tensor& t:grad){
-        size_t size = t.getTotalSize();
-        float *tData = t.getData();
-        memset(
-            tData,
-            0,
-            sizeof(float)*size
-        );
-        Tensor *biases = t.getBiases();
-        if(biases!=nullptr){
-            float *biasesData = biases->getData();
-            size_t biasesSize = biases->getTotalSize();
-            memset(
-                biasesData,
-                0,
-                sizeof(float)*biasesSize
-            );
-        }
-    }
-}
