@@ -40,9 +40,9 @@ int main(int argc,char **argv){
 	if(httpServerPid==0){
 		startHttpServer(pipefd);
 	}
-	pid_t picoI2cPid = fork();
 	int weedPipefd[2];
 	pipe(weedPipefd);
+	pid_t picoI2cPid = fork();
 	if(picoI2cPid==0){
 		picoI2cListenBlocking(weedPipefd);
 	}
@@ -105,6 +105,7 @@ void locateWeedsBlocking(int pipefd[2]){
 			if(result[2] > hasWeedThreshold){
 				std::cout << "Weed spotted at: ("+std::to_string(result[0])+","+
 				std::to_string(result[1])+")" << std::endl;
+				weed = true;
 				weedX = (char) (result[0]*100);
 				weedY = (char) (result[1]*100);
 			}

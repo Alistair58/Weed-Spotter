@@ -16,7 +16,7 @@ void picoI2cListenBlocking(int pipefd[2]){
 	//We don't write
 	close(pipefd[1]);
 	//Make read end of pipe non-blocking
-	//fcntl(pipefd[0],F_SETFL,O_NONBLOCK);
+	fcntl(pipefd[0],F_SETFL,O_NONBLOCK);
 
 	if(gpioInitialise() < 0){
 		throw std::runtime_error("Could not initialise GPIO pins");
@@ -44,7 +44,7 @@ void picoI2cListenBlocking(int pipefd[2]){
 	const float shootDuration = 0.5f;
 	while(true){
 		int retVal = read(pipefd[0],buffer,sizeof(buffer));
-		std::cout << retVal << std::endl;
+		//std::cout << retVal << std::endl;
 		if(retVal==sizeof(buffer)){
 			std::cout << "Read pipe" << std::endl;
 			weed = buffer[0] == 1;
