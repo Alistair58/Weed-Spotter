@@ -59,7 +59,7 @@ class CnnUtils {
             ,Timer *parentTimer = nullptr
         #endif
         ) const;
-        static void normaliseImg(Tensor& img
+        void normaliseImg(Tensor& img
         #if PROFILING
             ,Timer *parentTimer = nullptr
         #endif 

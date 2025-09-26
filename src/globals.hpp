@@ -4,9 +4,7 @@
 #include <vector>
 #include <string>
 
-extern const std::string ANSI_RED;
-extern const std::string ANSI_RESET;
-extern const std::string ANSI_GREEN;
+extern const std::string currDir;
 
 typedef std::vector<float> d1;
 typedef std::vector<d1> d2; 

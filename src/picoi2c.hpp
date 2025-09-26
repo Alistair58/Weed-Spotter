@@ -7,9 +7,11 @@
 #define ZERO_CHECK_BYTE 0xA6
 
 typedef enum ZERO_CMDS{
-	POWEROFF = 0x10
+	POWEROFF = 0x10,
+	HAS_WEED = 0x20,
+	SHOOT = 0x30
 } ZERO_CMDS;
 
-void picoI2cListenBlocking(void);
+void picoI2cListenBlocking(int pipefd[2]);
 
 #endif

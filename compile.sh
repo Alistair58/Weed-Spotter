@@ -1,7 +1,7 @@
 #!/bin/sh
 cd build
 cmake ..
-make
+make VERBOSE=1
 cd ..
 mv build/Weed-Spotter Weed-Spotter
 

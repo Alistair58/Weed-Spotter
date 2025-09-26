@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alistair/Weed-Spotter/src/httpserver.cpp" "CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/httpserver.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/main.cpp" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/main.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/picoi2c.cpp" "CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.o.d"
+  "/home/alistair/Weed-Spotter/src/pump.cpp" "CMakeFiles/Weed-Spotter.dir/src/pump.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/pump.cpp.o.d"
   "/home/alistair/Weed-Spotter/src/streamer.cpp" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o" "gcc" "CMakeFiles/Weed-Spotter.dir/src/streamer.cpp.o.d"
   )
 

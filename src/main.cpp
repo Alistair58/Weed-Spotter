@@ -14,16 +14,18 @@
 
 //DONE
 //Moved includes to .cpp if applicable for faster compilation
+//Compiles
+//i2c for pump
+
 
 //TODO
 
-//make it compile
 
-std::string currDir = "/home/alistair/Weed-Spotter";
+const std::string currDir = "/home/alistair/Weed-Spotter";
 
 Tensor uint8ToTensor(uint8_t *data,size_t dataSize,const std::vector<int>& dimens);
 d2 loadPixelStats();
-void locateWeedsBlocking();
+void locateWeedsBlocking(int pipefd[2]);
 
 int main(int argc,char **argv){
 	//Pipe to give the rpicam-vid PID to the server so it can take photos
@@ -39,17 +41,25 @@ int main(int argc,char **argv){
 		startHttpServer(pipefd);
 	}
 	pid_t picoI2cPid = fork();
+	int weedPipefd[2];
+	pipe(weedPipefd);
 	if(picoI2cPid==0){
-		picoI2cListenBlocking();
+		picoI2cListenBlocking(weedPipefd);
 	}
-	locateWeedsBlocking();
+	locateWeedsBlocking(weedPipefd);
 	return 0;
 }
 
-void locateWeedsBlocking(){
+void locateWeedsBlocking(int pipefd[2]){
 	//TODO - just for testing
 	const uint64_t usDelay = 1e6;
-
+	
+	bool weed = false;
+	char weedX = 0;
+	char weedY = 0;
+	char pipeBuffer[3] = {0};
+	//We never read anything
+	close(pipefd[0]);
 	d2 pixelStats = loadPixelStats();
 	CNN cnn(pixelStats);
 
@@ -57,7 +67,7 @@ void locateWeedsBlocking(){
 
 	const std::vector<int> imageDimens = {3,480,640};
     	std::string pipelineDesc =
-        "rtspsrc location=rtsp://127.0.0.1:8554/stream ! decodebin ! "
+        "rtspsrc location=rtsp://127.0.0.1:8554/stream latency=200 ! decodebin ! "
         "videoconvert ! video/x-raw,format=RGB,width="+std::to_string(imageDimens[2])+
 		",height="+std::to_string(imageDimens[1])+" ! appsink name=sink";
 
@@ -70,40 +80,53 @@ void locateWeedsBlocking(){
     	}
 
     	GstElement *appsink = gst_bin_get_by_name(GST_BIN(pipeline), "sink");
-
+	g_object_set(G_OBJECT(appsink),"emit-signals",FALSE,"max-buffers",1,"drop",TRUE,NULL);
     	gst_element_set_state(pipeline, GST_STATE_PLAYING);
 
 	while(1){
         	//Pull one sample (blocking)
-        	GstSample *sample = gst_app_sink_pull_sample(GST_APP_SINK(appsink));
+        	GstSample *sample = gst_app_sink_try_pull_sample(GST_APP_SINK(appsink),1000000); //1ms
 	        if (!sample) {
-	            std::cerr << "No sample" << std::endl;
+	        	std::cerr << "No sample" << std::endl;
+			continue;
 	        }
 
-	        GstBuffer *buffer = gst_sample_get_buffer(sample);
+	        GstBuffer *gstBuffer = gst_sample_get_buffer(sample);
 	        GstMapInfo map;
-	        if (gst_buffer_map(buffer, &map, GST_MAP_READ)) {
+	        if (gst_buffer_map(gstBuffer, &map, GST_MAP_READ)) {
 	            //map.data is a pointer to the raw pixels
 	            //RGB height x width x channels
-	            const uint8_t *pixels = map.data;
-	            size_t size = map.size;
-				Tensor inputImage = uint8ToTensor(map.data,map.size,imageDimens);
+	         	const uint8_t *pixels = map.data;
+	        	size_t size = map.size;
+			Tensor inputImage = uint8ToTensor(map.data,map.size,imageDimens);
 
-				const float hasWeedThreshold = 0.5f;
-				std::vector result = cnn.forwards(inputImage);
-				if(result[2] > hasWeedThreshold){
-					std::cout << "Weed spotted at: ("+std::to_string(result[0])+","+
-					std::to_string(result[1])+")" << std::endl;
-				}
-				else{
-					std::cout << "No weeds present" << std::endl;
-				}
-	            gst_buffer_unmap(buffer, &map);
+			const float hasWeedThreshold = 0.5f;
+			std::vector result = cnn.forwards(inputImage);
+			if(result[2] > hasWeedThreshold){
+				std::cout << "Weed spotted at: ("+std::to_string(result[0])+","+
+				std::to_string(result[1])+")" << std::endl;
+				weedX = (char) (result[0]*100);
+				weedY = (char) (result[1]*100);
+			}
+			else{
+				std::cout << "No weeds present" << std::endl;
+				weed = false;
+				weedX = 0;
+				weedY = 0;
+			}
+			pipeBuffer[0] = weed?1:0;
+			pipeBuffer[1] = weedX;
+			pipeBuffer[2] = weedY;
+			//Give the weed info to i2C
+			write(pipefd[1],pipeBuffer,sizeof(pipeBuffer));
+			printf("Written to pipe: %d %d %d\n",pipeBuffer[0],pipeBuffer[1],pipeBuffer[2]);
+  			gst_buffer_unmap(gstBuffer, &map);
 	        }
 	        gst_sample_unref(sample);
 
 		usleep(usDelay);
 	}
+	close(pipefd[1]);
 
     	gst_element_set_state(pipeline, GST_STATE_NULL);
    	gst_object_unref(pipeline);
@@ -115,7 +138,7 @@ d2 loadPixelStats(){
 	statsFile >> jsonStats;
     	statsFile.close();
     	if(jsonStats.size()!=3){
-        	throw std::invalid_argument(ANSI_RED+"Stats file is not in the format {{mean1,..},{stdDev1,..},{count}}"+ANSI_RESET);
+        	throw std::invalid_argument("Stats file is not in the format {{mean1,..},{stdDev1,..},{count}}");
     	}
 	return jsonStats.get<d2>();
 }

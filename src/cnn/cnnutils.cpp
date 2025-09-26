@@ -398,7 +398,7 @@ Tensor CnnUtils::convolution(const Tensor& image,Tensor& kernel,const int xStrid
                         const float32x4_t R22 = vld1q_f32(paddedRow2Base+2);
 
                         //Compute kernel*image for 4 convolutions at once for each kernel element
-                        float32x4_t acc = _vdupq_n_f32(0.0f); //set to zero
+                        float32x4_t acc = vdupq_n_f32(0.0f); //set to zero
                         acc = vmlaq_f32(acc, K00, R00);
                         acc = vmlaq_f32(acc, K01, R01);
                         acc = vmlaq_f32(acc, K02, R02);
@@ -644,6 +644,8 @@ Tensor CnnUtils::convolution(const Tensor& image,Tensor& kernel,const int xStrid
         const int resultChildSizes0 = resultChildSizes[0];
         const int kernelDimens1 = kernelDimens[1];
         const int kernelDimens2 = kernelDimens[2];
+	const int xStride2 = xStride * 2;
+	const int xStride3 = xStride * 3;
         for(int l=0;l<paddedImgDimens0;l++){
             int newY = 0;
             int newX = 0;
@@ -970,7 +972,6 @@ std::vector<Tensor> CnnUtils::loadKernels(
             if(parentTimer) loadKernelsTimer->stop("(loadOld)");
         #endif
         return result;
-    }
 }
 
 std::vector<Tensor> CnnUtils::loadWeights(

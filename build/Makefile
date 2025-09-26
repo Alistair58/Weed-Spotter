@@ -321,6 +321,30 @@ src/picoi2c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/picoi2c.cpp.s
 .PHONY : src/picoi2c.cpp.s
 
+src/pump.o: src/pump.cpp.o
+.PHONY : src/pump.o
+
+# target to build an object file
+src/pump.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/pump.cpp.o
+.PHONY : src/pump.cpp.o
+
+src/pump.i: src/pump.cpp.i
+.PHONY : src/pump.i
+
+# target to preprocess a source file
+src/pump.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/pump.cpp.i
+.PHONY : src/pump.cpp.i
+
+src/pump.s: src/pump.cpp.s
+.PHONY : src/pump.s
+
+# target to generate assembly for a file
+src/pump.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Weed-Spotter.dir/build.make CMakeFiles/Weed-Spotter.dir/src/pump.cpp.s
+.PHONY : src/pump.cpp.s
+
 src/streamer.o: src/streamer.cpp.o
 .PHONY : src/streamer.o
 
@@ -378,6 +402,9 @@ help:
 	@echo "... src/picoi2c.o"
 	@echo "... src/picoi2c.i"
 	@echo "... src/picoi2c.s"
+	@echo "... src/pump.o"
+	@echo "... src/pump.i"
+	@echo "... src/pump.s"
 	@echo "... src/streamer.o"
 	@echo "... src/streamer.i"
 	@echo "... src/streamer.s"

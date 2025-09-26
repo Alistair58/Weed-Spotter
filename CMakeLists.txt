@@ -8,6 +8,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBCAMERA REQUIRED libcamera)
 pkg_check_modules(JPEG REQUIRED libjpeg)
 pkg_check_modules(GSTREAMER REQUIRED gstreamer-1.0)
+pkg_check_modules(GSTREAMER_APP REQUIRED gstreamer-app-1.0)
 pkg_check_modules(GSTREAMER_RTSP REQUIRED gstreamer-rtsp-server-1.0)
 find_package(civetweb CONFIG REQUIRED)
 
@@ -21,6 +22,7 @@ add_executable(Weed-Spotter
 	src/cnn/cnn.cpp
 	src/cnn/cnnutils.cpp
 	src/cnn/tensor.cpp
+	src/pump.cpp
 )
 
 
@@ -33,6 +35,7 @@ target_include_directories(Weed-Spotter  PRIVATE
 	${LIBCAMERA_INCLUDE_DIRS}
 	${GSTREAMER_INCLUDE_DIRS}
 	${GSTREAMER_RTSP_INCLUDE_DIRS}
+	${GSTREAMER_APP_INCLUDE_DIRS}
 	/usr/include
 )
 
@@ -42,6 +45,7 @@ target_link_libraries(Weed-Spotter  PRIVATE
 	${GSTREAMER_LIBRARIES}
 	${GSTREAMER_RTSP_LIBRARIES}
 	${PIGPIO_LIBRARIES}
+	${GSTREAMER_APP_LIBRARIES}
 	civetweb::civetweb-cpp
 	pigpio
 )
